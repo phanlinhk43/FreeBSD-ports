@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: netgate_nginx_authd
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# netgate_nginx_authd_enable (bool):	Set to NO by default.
+#					Set it to YES to enable doormand.
+
+. /etc/rc.subr
+
+name=netgate_nginx_authd
+rcvar=netgate_nginx_authd_enable
+
+load_rc_config $name
+
+: ${netgate_ngix_authd_enable:=NO}
+
+command=%%PREFIX%%/bin/nginx-authd
+pidfile=/var/run/${name}.pid
+
+start_cmd=netgate_nginx_authd_start
+
+netgate_nginx_authd_start()
+{
+	/usr/sbin/daemon -f -p ${pidfile} ${command}
+}
+
+run_rc_command "$1"
