@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	maim
-PORTVERSION=	5.5.1
+PORTVERSION=	5.5.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
 
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2 \
 		libicuuc.so:devel/icu \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libslopy.so:x11/slop
 
 USES=		cmake jpeg

@@ -1,8 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	waterfox
-DISTVERSION=	56.2.0-31
-DISTVERSIONSUFFIX=	-gf435a827f82ac
+DISTVERSION=	56.2.1-19
+DISTVERSIONSUFFIX=	-gff88ad0b627dc
+PORTREVISION=	2
 CATEGORIES=	www ipv6
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -52,6 +53,9 @@ MOZ_OPTIONS=	--enable-application=browser \
 OPTIONS_DEFAULT=	BUNDLED_CAIRO
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
+
+# Inconsistent fallback order (libcubeb vs. audio_device)
+SNDIO_PREVENTS=		${OPTIONS_MULTI_AUDIO:NSNDIO}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/%u/%U/' -e '/X-MultipleArgs/d' \

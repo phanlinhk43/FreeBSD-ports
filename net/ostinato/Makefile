@@ -3,7 +3,7 @@
 
 PORTNAME=	ostinato
 PORTVERSION=	0.8
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	net security
 MASTER_SITES=	https://bintray.com/artifact/download/pstavirs/ostinato/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
@@ -15,7 +15,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 
-USES=		qmake
+USES=		compiler:c++11-lang qmake
 USE_QT4=	corelib gui moc_build rcc_build uic_build network script \
 		xml
 
