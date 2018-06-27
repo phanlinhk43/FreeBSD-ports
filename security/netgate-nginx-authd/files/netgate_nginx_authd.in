@@ -19,7 +19,7 @@ rcvar=netgate_nginx_authd_enable
 
 load_rc_config $name
 
-: ${netgate_ngix_authd_enable:=NO}
+: ${netgate_nginx_authd_enable:=NO}
 
 command=%%PREFIX%%/bin/nginx-authd
 pidfile=/var/run/${name}.pid
