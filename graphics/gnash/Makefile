@@ -3,7 +3,7 @@
 
 PORTNAME=	gnash
 PORTVERSION=	0.8.10
-PORTREVISION=	36
+PORTREVISION=	37
 CATEGORIES=	graphics
 MASTER_SITES=	http://git.savannah.gnu.org/cgit/gnash.git/snapshot/
 DISTNAME=	gnash-2b3bdede0305c4fc3ad21a0a4197330606c9b880
@@ -73,7 +73,7 @@ FFMPEG_DESC=	ffmpeg media handler
 GSTREAMER_DESC=	GStreamer media handler
 VAAPI_DESC=	VAAPI support (requires FFMPEG)
 
-KDE4_USES=	kde:4
+KDE4_USES=	kde:4 qmake:no_env qt:4
 CYGNAL_CONFIGURE_ENABLE=	cygnal
 
 .include <bsd.port.options.mk>
@@ -108,8 +108,7 @@ GNASH_GUIS+=	gtk
 
 .if ${PORT_OPTIONS:MKDE4}
 GNASH_GUIS+=	kde4
-USE_QT4=	moc_build
-QT_NONSTANDARD=	yes
+USE_QT=		moc_build
 USE_KDE=	kdelibs
 CONFIGURE_ARGS+=	--without-gconf
 CONFIGURE_ENV+=	KDE4_CONFIG="${KDE_PREFIX}/bin/kde4-config"

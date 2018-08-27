@@ -2,7 +2,6 @@
 
 PORTNAME=	korganizer
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -10,7 +9,7 @@ COMMENT=	Calendar and scheduling Program
 
 LIB_DEPENDS=	libical.so:devel/libical
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 qt:5 tar:xz
 USE_KDE=	attica auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons ecm guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kdelibs4support kio \
@@ -21,8 +20,9 @@ USE_KDE+=	akonadi akonadicalendar akonadicontacts akonadimime \
 		akonadinotes akonadisearch calendarcore calendarsupport \
 		calendarutils contacts eventviews holidays identitymanagement \
 		incidenceeditor kdepim-apps-libs kontactinterface ldap \
-		libkdepim mailtransport mime pimcommon pimtextedit
-USE_QT5=	core dbus gui network phonon4 printsupport widgets xml \
+		libkdepim mailtransport mime pimcommon pimtextedit \
+		kdepim-runtime5_run
+USE_QT=		core dbus gui network phonon4 printsupport widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 

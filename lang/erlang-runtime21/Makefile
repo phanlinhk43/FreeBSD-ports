@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	erlang
-PORTVERSION=	21.0.1
+PORTVERSION=	21.0.6
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg			\
 		http://erlang.stacken.kth.se/download/:erlangorg		\
 		http://www.csd.uu.se/ftp/mirror/erlang/download/:erlangorg	\
 		http://olgeni.olgeni.com/~olgeni/distfiles/:local		\
 		LOCAL/olgeni:local
-PKGNAMESUFFIX=	-runtime20
+PKGNAMESUFFIX=	-runtime21
 DISTNAME=	otp_src_${ERLANG_REL}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:erlangorg		\
 		preloaded-${PORTVERSION}${EXTRACT_SUFX}:local
@@ -18,7 +18,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=	http://olgeni.olgeni.com/~olgeni/distfiles/ \
 		LOCAL/olgeni
-PATCHFILES=	patch-otp-21.0.1
+PATCHFILES=	patch-otp-21.0.1 patch-otp-21.0.2 patch-otp-21.0.3 \
+		patch-otp-21.0.4 patch-otp-21.0.5 patch-otp-21.0.6
 
 MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	Functional programming language from Ericsson
