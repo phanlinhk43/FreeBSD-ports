@@ -64,6 +64,7 @@
     SUBDIR += boodler
     SUBDIR += bristol
     SUBDIR += bs2b-lv2
+    SUBDIR += cadence
     SUBDIR += calf-lv2
     SUBDIR += cam
     SUBDIR += cantata
@@ -118,6 +119,7 @@
     SUBDIR += dpf-plugins-lv2
     SUBDIR += dream
     SUBDIR += drumgizmo
+    SUBDIR += drumkv1-lv2
     SUBDIR += drumpiler
     SUBDIR += drumstick
     SUBDIR += dsbmixer
@@ -129,6 +131,7 @@
     SUBDIR += eawpats
     SUBDIR += eawplus
     SUBDIR += ecasound
+    SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
     SUBDIR += epos-devel
@@ -147,6 +150,7 @@
     SUBDIR += faad
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
+    SUBDIR += fasttracker2
     SUBDIR += faust
     SUBDIR += faust-lv2
     SUBDIR += faustlive
@@ -178,7 +182,6 @@
     SUBDIR += festvox-rab16
     SUBDIR += festvox-rab8
     SUBDIR += festvox-russian
-    SUBDIR += firefly
     SUBDIR += flac
     SUBDIR += flac123
     SUBDIR += flacon
@@ -301,6 +304,7 @@
     SUBDIR += gstreamer1-plugins-mpg123
     SUBDIR += gstreamer1-plugins-musepack
     SUBDIR += gstreamer1-plugins-ogg
+    SUBDIR += gstreamer1-plugins-openmpt
     SUBDIR += gstreamer1-plugins-opus
     SUBDIR += gstreamer1-plugins-pulse
     SUBDIR += gstreamer1-plugins-shout2
@@ -314,6 +318,7 @@
     SUBDIR += gstreamer1-plugins-twolame
     SUBDIR += gstreamer1-plugins-vorbis
     SUBDIR += gstreamer1-plugins-wavpack
+    SUBDIR += gstreamer1-plugins-webrtcdsp
     SUBDIR += gtick
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
@@ -332,8 +337,8 @@
     SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
     SUBDIR += hydrogen
+    SUBDIR += icecast
     SUBDIR += icecast-kh
-    SUBDIR += icecast2
     SUBDIR += icegenerator
     SUBDIR += ices
     SUBDIR += id3ed
@@ -435,7 +440,9 @@
     SUBDIR += libnoise
     SUBDIR += libogg
     SUBDIR += liboggz
+    SUBDIR += libopenmpt
     SUBDIR += libopenspc
+    SUBDIR += libopusenc
     SUBDIR += libsamplerate
     SUBDIR += libshairport
     SUBDIR += libshout
@@ -493,6 +500,7 @@
     SUBDIR += logitechmediaserver-trackstat
     SUBDIR += lollypop
     SUBDIR += lpac
+    SUBDIR += lsp-plugins-lv2
     SUBDIR += lua51-mpd
     SUBDIR += luppp
     SUBDIR += lv2
@@ -559,8 +567,6 @@
     SUBDIR += mpg321
     SUBDIR += mpiosh
     SUBDIR += mps
-    SUBDIR += msbcg729
-    SUBDIR += msilbc
     SUBDIR += mumble
     SUBDIR += murmur
     SUBDIR += musepack
@@ -570,7 +576,6 @@
     SUBDIR += musicpc
     SUBDIR += musicpd
     SUBDIR += mythplugin-mythmusic
-    SUBDIR += napster
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
@@ -639,6 +644,7 @@
     SUBDIR += paprefs
     SUBDIR += patchage
     SUBDIR += pavucontrol
+    SUBDIR += pavucontrol-qt
     SUBDIR += pavumeter
     SUBDIR += pc-mixer
     SUBDIR += pd
@@ -683,7 +689,7 @@
     SUBDIR += py-karaoke
     SUBDIR += py-mpd
     SUBDIR += py-mpd2
-    SUBDIR += py-musicbrainz2
+    SUBDIR += py-music21
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-ogg
@@ -722,12 +728,15 @@
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound
+    SUBDIR += rhvoice
+    SUBDIR += rhvoice-dictionary
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil
     SUBDIR += ripit
     SUBDIR += ripperx
     SUBDIR += rkr-lv2
+    SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
     SUBDIR += rplay
     SUBDIR += rsynth
@@ -741,6 +750,7 @@
     SUBDIR += rubygem-ruby-ogginfo
     SUBDIR += rubygem-ruby-shout
     SUBDIR += s3mod
+    SUBDIR += samplv1-lv2
     SUBDIR += sayonara
     SUBDIR += sbagen
     SUBDIR += sc3-plugins
@@ -781,8 +791,10 @@
     SUBDIR += soundtouch
     SUBDIR += soundtracker
     SUBDIR += sox
+    SUBDIR += spc2it
     SUBDIR += specimen
     SUBDIR += spectrogram
+    SUBDIR += speech-denoiser-lv2
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
@@ -806,6 +818,7 @@
     SUBDIR += swh-lv2
     SUBDIR += swhplugins
     SUBDIR += synthpod-lv2
+    SUBDIR += synthv1-lv2
     SUBDIR += taglib
     SUBDIR += taglib-extras
     SUBDIR += taglib-sharp
@@ -864,6 +877,7 @@
     SUBDIR += waveplay
     SUBDIR += wavpack
     SUBDIR += wavplay
+    SUBDIR += webrtc-audio-processing
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmalbum

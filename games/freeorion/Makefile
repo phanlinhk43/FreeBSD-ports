@@ -3,9 +3,13 @@
 
 PORTNAME=	freeorion
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.8-rc2
+DISTVERSION=	0.4.8
 PORTREVISION=	1
 CATEGORIES=	games
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	fd05b34fcc68.patch:-p1
+PATCHFILES+=	35863f31210b.patch:-p1
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Turn-based space empire and galactic conquest game
@@ -19,6 +23,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 USE_GITHUB=	yes
 
 USES=		cmake compiler:c++14-lang python:2.7
+LLD_UNSAFE=	yes
 
 PORTDOCS=	ChangeLog.md README.md
 PORTDATA=	*

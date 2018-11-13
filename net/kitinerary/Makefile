@@ -16,11 +16,13 @@ USES=		cmake:outsource gettext kde:5 pkgconfig qt:5 tar:xz
 USE_KDE=	ecm i18n
 # Pim components
 USE_KDE+=	calendarcore contacts kpkpass mime
-USE_QT=		core qml \
+USE_QT=		core declarative \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

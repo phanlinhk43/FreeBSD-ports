@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	squid
-PORTVERSION=	4.1
+PORTVERSION=	4.3
 PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.squid-cache.org/Versions/v4/ \
@@ -9,8 +9,7 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v4/ \
 		http://www1.at.squid-cache.org/Versions/v4/ \
 		http://www.eu.squid-cache.org/Versions/v4/ \
 		http://www1.jp.squid-cache.org/Versions/v4/
-#DIST_SUBDIR=	squid${PORTVERSION:R}
-DIST_SUBDIR=	squid${PORTVERSION}
+DIST_SUBDIR=	squid${PORTVERSION:R}
 
 PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www2.us.squid-cache.org/%SUBDIR%/ \
@@ -218,6 +217,7 @@ CONFIGURE_ARGS=	--with-default-user=squid \
 		--with-pidfile=/var/run/squid/squid.pid \
 		--with-swapdir=/var/squid/cache \
 		--without-gnutls \
+		--with-included-ltdl \
 		--enable-auth \
 		--enable-zph-qos \
 		--enable-build-info \

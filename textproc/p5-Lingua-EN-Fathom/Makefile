@@ -7,15 +7,14 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tobez@FreeBSD.org
-COMMENT=	Lingua::EN::Fathom - Measure readability of English text
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Measure readability of English text
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
 
-COMMON_DEPENDS=	p5-Lingua-EN-Syllable>=0:textproc/p5-Lingua-EN-Syllable
-BUILD_DEPENDS=	${COMMON_DEPENDS}
-RUN_DEPENDS=	${COMMON_DEPENDS}
+BUILD_DEPENDS=	${RUN_DEPENDS}
+RUN_DEPENDS=	p5-Lingua-EN-Syllable>=0:textproc/p5-Lingua-EN-Syllable
 
 USES=		perl5
 USE_PERL5=	configure

@@ -3,7 +3,7 @@
 
 PORTNAME=	openscad
 PORTVERSION=	2015.03
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	cad
 MASTER_SITES=	http://files.openscad.org/
 DISTNAME=	openscad-${PORTVERSION}.src
@@ -43,7 +43,7 @@ post-patch:
 
 #.include <bsd.port.options.mk>
 #
-#.if ${ARCH} == i386 && ${OSVERSION} >= 1100000
+#.if ${ARCH} == i386
 #USE_GCC=        yes
 #.endif
 

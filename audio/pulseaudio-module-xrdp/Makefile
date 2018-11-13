@@ -1,7 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	pulseaudio-module-xrdp
-PORTVERSION=	0.0.20180808
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.2
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	meta@FreeBSD.org
@@ -9,16 +11,15 @@ COMMENT=	PulseAudio module which enables xrdp to use audio redirection
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	${NONEXISTENT}:audio/pulseaudio:configure \
-		${LOCALBASE}/include/xrdp_constants.h:net/xrdp
+BUILD_DEPENDS=	${NONEXISTENT}:audio/pulseaudio:configure
 LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 
-USES=		autoreconf:build libtool pkgconfig
-GNU_CONFIGURE=	yes
+USES=		autoreconf:build libtool localbase pkgconfig
 USE_GITHUB=	yes
+
+GNU_CONFIGURE=	yes
 GH_ACCOUNT=	neutrinolabs
 GH_PROJECT=	pulseaudio-module-xrdp
-GH_TAGNAME=	0d80384
 
 PLIST_FILES=	`${PULSE_MODDIR}`/module-xrdp-sink.so \
 		`${PULSE_MODDIR}`/module-xrdp-source.so
@@ -30,7 +31,7 @@ PULSE_MODDIR=	pkg-config --variable=modlibexecdir libpulse
 PULSE_WRKSRC=	${MAKE} -C ${PORTSDIR}/audio/pulseaudio -VWRKSRC
 
 pre-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./bootstrap.sh
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./bootstrap
 	@${CP} -r "`${PULSE_WRKSRC}`" ${WRKDIR}
 
 .include <bsd.port.mk>

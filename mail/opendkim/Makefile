@@ -3,7 +3,7 @@
 
 PORTNAME=	opendkim
 PORTVERSION=	2.10.3
-PORTREVISION=	8
+PORTREVISION=	11
 CATEGORIES=	mail security
 MASTER_SITES=	SF/${PORTNAME} \
 		SF/${PORTNAME}/Previous%20Releases \
@@ -20,12 +20,9 @@ LICENSE_GROUPS_SENDMAIL=FSF OSI
 LICENSE_NAME_SENDMAIL=	Sendmail Open Source License
 LICENSE_PERMS_SENDMAIL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BROKEN_SSL=	openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	checking for library containing SSL_library_init... no
-
 GNU_CONFIGURE=	yes
 NO_OPTIONS_SORT=yes
-USES=		libtool perl5 pkgconfig shebangfix ssl
+USES=		autoreconf libtool perl5 pkgconfig shebangfix ssl
 USE_PERL5=	run
 SHEBANG_FILES=	opendkim/opendkim-genkey* reputation/opendkim-* stats/opendkim-* \
 		reprrd/opendkim-reprrdimport*
@@ -40,7 +37,7 @@ OPTIONS_SUB=		yes
 OPTIONS_SINGLE=		RESOLV
 OPTIONS_SINGLE_RESOLV=	STOCK_RESOLVER UNBOUND
 OPTIONS_DEFINE=		FILTER CURL GNUTLS JANSSON LDNS LMDB LUA MEMCACHED \
-			BDB_BASE OPENDBX OPENLDAP POPAUTH QUERY_CACHE SASL
+			BDB_BASE OPENDBX OPENLDAP POPAUTH QUERY_CACHE SASL DOCS
 OPTIONS_DEFAULT=	FILTER LUA UNBOUND
 
 STOCK_RESOLVER_DESC=	Use the stock resolver library
@@ -100,8 +97,6 @@ QUERY_CACHE_CONFIGURE_ENABLE=	query_cache
 SASL_DESC=		Enable SASL authentication with LDAP
 SASL_CONFIGURE_WITH=	sasl
 
-DOCS_CONFIGURE_ON=	--docdir=${WRKDIR}/doc
-
 MAKE_ARGS+=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 
@@ -160,10 +155,9 @@ LDFLAGS+=		-lpthread
 .endif
 
 pre-configure:
-	${REINPLACE_CMD} -e '/LIBLUA_LIBS/s/lua5\.[0-9]/lua-${LUA_VER}/' \
-	    -e '/PKG_CONFIG/s/lua5\.[0-9]/lua-${LUA_VER}/'		 \
+	${REINPLACE_CMD} -e '/PKG_CHECK_MODULES/s/lua5\.[0-9]/lua-${LUA_VER}/' \
 	    -e '/PKG_CONFIG/s/cyrussasl/libsasl2/'			 \
-	    ${WRKSRC}/configure
+	    ${WRKSRC}/configure.ac
 
 post-patch-LCOV-on:
 	${CP} ${FILESDIR}/lcov-helper.sh ${WRKSRC}/libopendkim/tests/

@@ -39,11 +39,7 @@ SUB_FILES=	999_mod_md.conf pkg-message
 DOCSDIR=	share/doc/mod_md
 PORTDOCS=	README README.md
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100085 && ${SSL_DEFAULT} == base
-IGNORE=		port requires OpenSSL 1.0.2 or later, set DEFAULT_VERSIONS+= ssl=openssl
-.endif
+OPTIONS_DEFINE=	DOCS
 
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/share/doc/mod_md/LICENSE
@@ -56,4 +52,4 @@ post-install:
 	(cd ${STAGEDIR}${PREFIX}/${APACHEMODDIR} && \
 		${LN} mod_manageddomain.so.0.0.0 mod_manageddomain.so)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

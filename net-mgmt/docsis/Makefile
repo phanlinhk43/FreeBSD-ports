@@ -3,6 +3,7 @@
 
 PORTNAME=	docsis
 PORTVERSION=	0.9.8
+DISTVERSIONPREFIX=	upstream/
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	plcmaechler@gmail.com
@@ -18,13 +19,13 @@ LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp \
 USES=		autoreconf bison libtool ssl
 USE_GITHUB=	yes
 GNU_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB=	MIBS=share/snmp/mibs
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 GH_ACCOUNT=	rlaager
-GH_TAGNAME=	upstream/${PORTVERSION}
 
 post-patch:
 	@${REINPLACE_CMD} -e \

@@ -7,7 +7,7 @@ CATEGORIES=	net-im kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE instant messaging contact list application
 
-LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt5 \
+LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt@qt5 \
 		libtelepathy-logger-qt.so:net-im/telepathy-logger-qt5 \
 		libKTpCommonInternals.so:net-im/ktp-common-internals
 
@@ -18,5 +18,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		windowsystem xmlgui
 USE_QT=		core dbus gui network widgets xml \
 		buildtools_build qmake_build
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

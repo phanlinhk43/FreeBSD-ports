@@ -8,8 +8,11 @@ CATEGORIES=	net kde kde-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDP and VNC client for KDE
 
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
+
 LIB_DEPENDS=	libvncserver.so:net/libvncserver \
-		libtelepathy-qt4.so:net-im/telepathy-qt4
+		libtelepathy-qt4.so:net-im/telepathy-qt@qt4
 
 USES=		cmake:outsource kde:4 qt:4 tar:xz
 USE_KDE=	kdelibs automoc4

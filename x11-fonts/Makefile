@@ -137,6 +137,7 @@
     SUBDIR += linuxlibertine-g
     SUBDIR += lohit
     SUBDIR += manu-gothica
+    SUBDIR += materialdesign-ttf
     SUBDIR += meslo
     SUBDIR += mgopen
     SUBDIR += mkbold
@@ -168,8 +169,10 @@
     SUBDIR += profont
     SUBDIR += proggy_fonts
     SUBDIR += proggy_fonts-ttf
+    SUBDIR += psftools
     SUBDIR += py-QtAwesome
     SUBDIR += py-bdflib
+    SUBDIR += raleway
     SUBDIR += roboto-fonts-ttf
     SUBDIR += sgifonts
     SUBDIR += sharefonts
@@ -177,6 +180,7 @@
     SUBDIR += sourcecodepro-ttf
     SUBDIR += sourcesanspro-ttf
     SUBDIR += sourceserifpro-ttf
+    SUBDIR += spleen
     SUBDIR += stix-fonts
     SUBDIR += suxus
     SUBDIR += symbola
@@ -186,6 +190,7 @@
     SUBDIR += tlwg-ttf
     SUBDIR += tmu
     SUBDIR += tv-fonts
+    SUBDIR += twemoji-color-font-ttf
     SUBDIR += ubuntu-font
     SUBDIR += urwfonts
     SUBDIR += urwfonts-ttf

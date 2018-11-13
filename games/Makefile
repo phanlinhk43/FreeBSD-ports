@@ -60,6 +60,7 @@
     SUBDIR += assaultcube
     SUBDIR += asteroid
     SUBDIR += asteroids3d
+    SUBDIR += astromenace
     SUBDIR += asylum
     SUBDIR += atanks
     SUBDIR += atomix
@@ -95,7 +96,6 @@
     SUBDIR += blinken-kde4
     SUBDIR += blinkensisters
     SUBDIR += blobby
-    SUBDIR += bloboats
     SUBDIR += blobwars
     SUBDIR += block
     SUBDIR += blockade
@@ -567,7 +567,6 @@
     SUBDIR += lexter
     SUBDIR += lgeneral
     SUBDIR += lianliankan
-    SUBDIR += libdungeonmaker
     SUBDIR += libggz
     SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
@@ -723,6 +722,8 @@
     SUBDIR += oneisenough
     SUBDIR += oneko
     SUBDIR += oneko-sakura
+    SUBDIR += onscripter
+    SUBDIR += onscripter-1byte
     SUBDIR += oolite
     SUBDIR += oonsoo
     SUBDIR += open-adventure
@@ -732,7 +733,6 @@
     SUBDIR += openarena-data
     SUBDIR += openarena-oax
     SUBDIR += openarena-server
-    SUBDIR += openastromenace
     SUBDIR += openbor
     SUBDIR += openbor3482
     SUBDIR += openbor3711
@@ -816,13 +816,13 @@
     SUBDIR += pokerth
     SUBDIR += polyglot
     SUBDIR += pongix
+    SUBDIR += ponscripter-sekai
     SUBDIR += popstar
     SUBDIR += pouetchess
     SUBDIR += powder
     SUBDIR += powder-toy
     SUBDIR += powermanga
     SUBDIR += powwow
-    SUBDIR += ppracer
     SUBDIR += prboom
     SUBDIR += prboom-plus
     SUBDIR += primateplunge
@@ -900,12 +900,15 @@
     SUBDIR += redeclipse-data
     SUBDIR += redorblack
     SUBDIR += reminiscence
+    SUBDIR += renpy
+    SUBDIR += renpy6
     SUBDIR += rescue
     SUBDIR += residualvm
     SUBDIR += retroarch
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li
+    SUBDIR += rlvm
     SUBDIR += rnd_jue
     SUBDIR += robocode
     SUBDIR += robocode-naval
@@ -1038,7 +1041,6 @@
     SUBDIR += toycars
     SUBDIR += trackballs
     SUBDIR += tractorgen
-    SUBDIR += traindirector
     SUBDIR += traingame
     SUBDIR += tremulous
     SUBDIR += trenchbroom
@@ -1088,6 +1090,7 @@
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris
+    SUBDIR += vkquake
     SUBDIR += vms-empire
     SUBDIR += vodovod
     SUBDIR += volleyball

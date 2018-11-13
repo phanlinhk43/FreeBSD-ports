@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	armadillo
-PORTVERSION=	9.100.5
+PORTVERSION=	9.200.4
 CATEGORIES=	math
 MASTER_SITES=	SF/arma
 
@@ -15,7 +15,7 @@ BROKEN_powerpc64=	Does not build
 
 LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libopenblasp.so:math/openblas \
-		libarpack.so:math/arpack \
+		libarpack.so:math/arpack-ng \
 		libhdf5.so:science/hdf5 \
 		libsuperlu.so:math/superlu \
 		libsz.so:science/szip

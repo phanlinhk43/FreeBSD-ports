@@ -4,7 +4,7 @@
 PORTNAME=	GoldenCheetah
 PORTVERSION=	3.2
 DISTVERSIONPREFIX=	V
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	games
 
 MAINTAINER=	trebbu@googlemail.com
@@ -12,6 +12,8 @@ COMMENT=	Training software for cyclists
 
 LICENSE=	BSD3CLAUSE GPLv2 LGPL21
 LICENSE_COMB=	multi
+
+BROKEN=		fails to build
 
 LIB_DEPENDS=	libical.so:devel/libical \
 		libqwtplot3d-qt4.so:math/qwtplot3d-qt4 \
@@ -32,6 +34,8 @@ USE_GL=		gl glu
 USE_QT=		corelib gui linguist moc_build network opengl \
 		qmake rcc script sql svg uic webkit xml
 INFO=		GC3-FAQ GC3-Release GC31-Release
+
+OPTIONS_DEFINE=	DOCS
 
 post-extract:
 	${CP} ${WRKSRC}/src/gcconfig.pri.in ${WRKSRC}/src/gcconfig.pri

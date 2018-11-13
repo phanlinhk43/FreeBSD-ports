@@ -6,15 +6,13 @@ PORTVERSION=	1.6.4
 CATEGORIES=	www
 MASTER_SITES=	https://opensource.conformal.com/snapshots/xombrero/
 
-MAINTAINER=	rea@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minimalists vi-like web browser based on webkit and GTK+
 
 LICENSE=	ISCL
 
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
 		libsoup-2.4.so:devel/libsoup
-
-BROKEN_FreeBSD_10=	does not build
 
 USES=		desktop-file-utils groff pkgconfig perl5 tar:tgz
 USE_PERL5=	build
@@ -35,6 +33,8 @@ GTK3_MAKE_ENV=		GTK_VERSION="gtk3"
 
 SUB_FILES=	xombrero
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	EXAMPLES
 
 post-patch:
 	@cd ${WRKSRC}; ${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \

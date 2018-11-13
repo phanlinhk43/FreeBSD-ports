@@ -2,7 +2,7 @@
 
 PORTNAME=	gabedit
 DISTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	http://prdownloads.sourceforge.net/${PORTNAME}/
 DISTNAME=	GabeditSrc${DISTVERSION:S/.//g}
@@ -12,6 +12,8 @@ COMMENT=	Graphical user interface for several chemistry software packages
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/License
+
+BROKEN_i386=	undefined reference to `__atomic_load'
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
@@ -25,12 +27,12 @@ INSTALLS_ICONS=	yes
 
 BINARY_ALIAS=	make=gmake
 
-PLIST_FILES=	bin/gabedit \
-		share/applications/gabedit.desktop
+PLIST_FILES=	bin/${PORTNAME} \
+		share/applications/${PORTNAME}.desktop
 
 ICON_SIZES=	16 24 32 48
 .for SZ in ${ICON_SIZES}
-PLIST_FILES+=	share/icons/hicolor/${SZ}x${SZ}/apps/gabedit.png
+PLIST_FILES+=	share/icons/hicolor/${SZ}x${SZ}/apps/${PORTNAME}.png
 .endfor
 
 OPTIONS_DEFINE=		OPENMP

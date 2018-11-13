@@ -2,6 +2,7 @@
 
 PORTNAME=	libksieve
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,12 +20,14 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 # pim components
 USE_KDE+=	akonadi identitymanagement libkdepim mailtransport mime \
 		pimcommon pimtextedit
-USE_QT=		core dbus gui location network printsupport qml quick testlib \
+USE_QT=		core dbus declarative gui location network printsupport testlib \
 		uitools webchannel webengine widgets xml \
                 buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

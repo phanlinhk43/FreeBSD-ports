@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	7.0.0rc1
-PORTREVISION=	0
+DISTVERSION=	7.0.0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -12,10 +12,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}.src${EXTRACT_SUFX}
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
 
-LICENSE=	LLVM
-LICENSE_NAME=	LLVM Release License
-LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+.include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
 LLVM_RELEASE=	${DISTVERSION:C/rc.*//}
 LLVM_MAJOR=	${LLVM_RELEASE:C/\.[0-9]\.[0-9]$//}
@@ -55,7 +52,6 @@ OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD LLDB
 OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
-OPTIONS_EXCLUDE_FreeBSD_10=	LLDB OPENMP
 OPTIONS_SUB=	yes
 
 CLANG_DESC=	Build clang
@@ -85,10 +81,12 @@ LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python:2.7
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
+LLD_EXTRA_PATCHES=	${PATCHDIR}/lld
 LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30 \
 			${PY_ENUM34}
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_DISTFILES=		lldb-${DISTVERSION}.src${EXTRACT_SUFX}
+LLDB_EXTRA_PATCHES=	${PATCHDIR}/lldb
 LLDB_IMPLIES=		CLANG
 LLDB_VARS=		_USES_PYTHON=python:2.7
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
@@ -154,6 +152,7 @@ COMMANDS=	bugpoint \
 		llvm-symbolizer \
 		llvm-tblgen \
 		llvm-undname \
+		llvm-xray \
 		macho-dump \
 		opt \
 		sancov
@@ -233,6 +232,7 @@ CLANG_PATTERN=	(c-index-test|clang|scan-|Reporter.py|ScanView.py|scanview.css|so
 SHEBANG_FILES+=	tools/clang/tools/scan-view/bin/scan-view \
 		tools/clang/tools/clang-format/git-clang-format \
 		tools/clang/tools/clang-format/clang-format-diff.py
+USES+=		gnome
 .endif
 
 .if ${PORT_OPTIONS:MCOMPILER_RT}
@@ -527,12 +527,12 @@ build-plist:
 	    if ($$0 ~ /${COMPILER_RT_PATTERN}/) \
 		{printf "%%%%COMPILER_RT%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
-	    if ($$0 ~ /libclangDoc.a/) {printf "%%%%DOCS%%%%"} \
-	    if ($$0 ~ /lld|wasm-ld/ && $$0 !~ /lldb/) {printf "%%%%LLD%%%%"} \
+	    if ($$0 ~ /(libclangDoc.a)/) {printf "%%%%DOCS%%%%"} \
+	    if ($$0 ~ /(lld|wasm-ld)/ && $$0 !~ /(lldb)/) {printf "%%%%LLD%%%%"} \
 	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
-	    if ($$0 ~ /lib.*omp|omp.h|ompt.h/) {printf "%%%%OPENMP%%%%"} \
-	    if ($$0 ~ /LLVMgold/) {printf "%%%%GOLD%%%%"} \
-	    if ($$0 !~ /libclang_rt/) {print}}' ${PLIST}.tmp >> ${PLIST}
+	    if ($$0 ~ /(lib.*omp|omp.h|ompt.h)/) {printf "%%%%OPENMP%%%%"} \
+	    if ($$0 ~ /(LLVMgold)/) {printf "%%%%GOLD%%%%"} \
+	    if ($$0 !~ /(libclang_rt)/) {print}}' ${PLIST}.tmp >> ${PLIST}
 	${ECHO_CMD} '@postexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi' >> ${PLIST}
 	${ECHO_CMD} '@postunexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi' >> ${PLIST}
 	${RM} ${PLIST}.tmp

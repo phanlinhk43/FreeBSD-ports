@@ -60,6 +60,7 @@
     SUBDIR += cryptoballot
     SUBDIR += cs
     SUBDIR += cstream
+    SUBDIR += ctm
     SUBDIR += dahdi
     SUBDIR += dahdi-kmod
     SUBDIR += dahdi-kmod26
@@ -154,6 +155,7 @@
     SUBDIR += gkrellweather2
     SUBDIR += gkx86info2
     SUBDIR += gnome-devel-docs
+    SUBDIR += gnome-getting-started-docs
     SUBDIR += gnome-icon-theme
     SUBDIR += gnome-icon-theme-extras
     SUBDIR += gnome-mime-data
@@ -193,8 +195,11 @@
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
+    SUBDIR += kde-thumbnailer-chm-kde4
     SUBDIR += kde-thumbnailer-epub
+    SUBDIR += kde-thumbnailer-epub-kde4
     SUBDIR += kde-thumbnailer-fb2
+    SUBDIR += kde-thumbnailer-fb2-kde4
     SUBDIR += kde4-l10n
     SUBDIR += kde4-l10n-bg
     SUBDIR += kde4-l10n-bs
@@ -252,6 +257,7 @@
     SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz
     SUBDIR += kwordquiz-kde4
+    SUBDIR += lastools
     SUBDIR += latex-mk
     SUBDIR += lazyread
     SUBDIR += lc
@@ -290,6 +296,7 @@
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmv
+    SUBDIR += molequeue
     SUBDIR += morse
     SUBDIR += mtail
     SUBDIR += mtx
@@ -393,6 +400,7 @@
     SUBDIR += php70-calendar
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
+    SUBDIR += php73-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -415,6 +423,7 @@
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-kartograph
+    SUBDIR += py-molequeue
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
@@ -442,9 +451,11 @@
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
+    SUBDIR += py-toil
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
     SUBDIR += pylize
+    SUBDIR += pyobd
     SUBDIR += qbrew
     SUBDIR += qlas
     SUBDIR += qmetro
@@ -457,6 +468,7 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qtchooser
+    SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
@@ -479,7 +491,6 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
-    SUBDIR += rumprun
     SUBDIR += saaghar
     SUBDIR += seabios
     SUBDIR += sent
@@ -514,7 +525,6 @@
     SUBDIR += termatrix
     SUBDIR += teseq
     SUBDIR += thefuck
-    SUBDIR += timediff
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp
@@ -525,6 +535,7 @@
     SUBDIR += tudu
     SUBDIR += tvbrowser
     SUBDIR += typetrainer
+    SUBDIR += tzdiff
     SUBDIR += uk-phone
     SUBDIR += uk-postcodes
     SUBDIR += umodunpack

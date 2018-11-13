@@ -3,7 +3,7 @@
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.3
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	sysutils multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 DISTFILES=	${DISTNAME}a${EXTRACT_SUFX}
@@ -11,6 +11,9 @@ PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE CD/DVD writing suite
+
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
 
 LIB_DEPENDS=	libcdda_paranoia.so:audio/cdparanoia \
 		libsamplerate.so:audio/libsamplerate

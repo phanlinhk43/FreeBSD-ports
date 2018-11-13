@@ -39,6 +39,7 @@
     SUBDIR += emacs
     SUBDIR += emacs-devel
     SUBDIR += encryptpad
+    SUBDIR += featherpad 
     SUBDIR += fileobj
     SUBDIR += flim
     SUBDIR += focuswriter
@@ -51,6 +52,7 @@
     SUBDIR += ghex
     SUBDIR += ghostwriter
     SUBDIR += gmanedit
+    SUBDIR += gnome-latex
     SUBDIR += gnotepad+
     SUBDIR += gobby
     SUBDIR += gomate
@@ -69,6 +71,7 @@
     SUBDIR += jove
     SUBDIR += jucipp
     SUBDIR += jupp
+    SUBDIR += kak-lsp
     SUBDIR += kakoune
     SUBDIR += kate
     SUBDIR += kate-kde4
@@ -77,7 +80,6 @@
     SUBDIR += kile-kde4
     SUBDIR += klat4
     SUBDIR += komodo-edit
-    SUBDIR += latexila
     SUBDIR += lazarus
     SUBDIR += lazarus-qt4
     SUBDIR += lazarus-qt5
@@ -261,7 +263,6 @@
     SUBDIR += xmlcopyeditor
     SUBDIR += xvile
     SUBDIR += yudit
-    SUBDIR += yui
     SUBDIR += yzis
     SUBDIR += zile
     SUBDIR += zoinks

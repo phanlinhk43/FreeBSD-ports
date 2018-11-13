@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mkvtoolnix
-PORTVERSION=	25.0.0
+PORTVERSION=	28.2.0
 PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/ \
@@ -14,6 +14,8 @@ COMMENT=	Tools to extract from/get info about/create Matroska media streams
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_sparc64=	does not install
+
 BUILD_DEPENDS=	rake:devel/rubygem-rake \
 		docbook-xsl>=0:textproc/docbook-xsl \
 		xsltproc:textproc/libxslt
@@ -23,8 +25,6 @@ LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 		libboost_regex.so:devel/boost-libs \
 		libpugixml.so:textproc/pugixml \
 		libmatroska.so:multimedia/libmatroska
-
-BROKEN_sparc64=	does not install
 
 USES=		compiler:c++14-lang iconv localbase pkgconfig tar:xz
 GNU_CONFIGURE=	yes
@@ -51,7 +51,7 @@ NLS_CONFIGURE_WITH=	gettext
 
 QT5_DESC=	Build and install GUI application (Qt 5)
 QT5_USES=	desktop-file-utils qt:5 shared-mime-info
-QT5_USE=	QT=buildtools_build,concurrent,core,gui,multimedia,network,quick,widgets
+QT5_USE=	QT=buildtools_build,concurrent,core,declarative,gui,multimedia,network,widgets
 QT5_CONFIGURE_ENABLE=	qt
 QT5_BUILD_DEPENDS=	qmake:devel/qt5-qmake
 QT5_LIB_DEPENDS=	libcmark.so:textproc/cmark

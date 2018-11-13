@@ -4,7 +4,7 @@ PORTNAME=	cloudcompare
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1-288
 DISTVERSIONSUFFIX=	-gb4d51361
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	neel@neelc.org
@@ -13,7 +13,6 @@ COMMENT=	3D point cloud processing software
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
 
-BROKEN_FreeBSD_10=	error: "SSE instruction set not enabled"
 BROKEN_aarch64=		fails to compile: mmintrin.h:47:5: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
 
 USES=		cmake:outsource localbase:ldflags qt:5

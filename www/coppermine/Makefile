@@ -11,12 +11,12 @@ COMMENT=	Web picture gallery script
 
 LICENSE=	GPLv3
 
-IGNORE_WITH_PHP=	70 71 72
+IGNORE_WITH_PHP=	70 71 72 73
 
 OPTIONS_DEFINE=	DOCS IMAGEMAGICK
 IMAGEMAGICK_DESC=	Use ImageMagick instead of PHP GD extension
 
-IMAGEMAGICK_RUN_DEPENDS+=	convert:graphics/ImageMagick
+IMAGEMAGICK_RUN_DEPENDS+=	convert:graphics/ImageMagick6
 
 USE_PHP=	mysql pcre ctype
 USES=		php zip

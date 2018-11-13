@@ -16,7 +16,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs
 
-USES=		cmake
+USES=		cmake compiler:c++11-lang
+
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 WRKSRC_SUBDIR=	lang/c++
 

@@ -3,7 +3,7 @@
 
 PORTNAME=			${SAMBA4_BASENAME}47
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			0
+PORTREVISION=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -20,12 +20,12 @@ CONFLICTS_INSTALL?=		samba4-4.0.* samba4[1-689]-4.* p5-Parse-Pidl-4.*
 EXTRA_PATCHES+=			${PATCHDIR}/0001-Zfs-provision-1.patch:-p1
 EXTRA_PATCHES+=			${PATCHDIR}/0001-Freenas-master-mdns-fixes-22.patch:-p1
 EXTRA_PATCHES+=			${PATCHDIR}/0001-audit.patch:-p1
-EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-13351.patch:-p1
+#EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-13351.patch:-p1
 EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-228462.patch:-p1
 
 SAMBA4_BASENAME=		samba
 SAMBA4_PORTNAME=		${SAMBA4_BASENAME}4
-SAMBA4_VERSION=			4.7.9
+SAMBA4_VERSION=			4.7.10
 SAMBA4_DISTNAME=		${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=			${WRKDIR}/${DISTNAME}
@@ -453,7 +453,7 @@ SUB_LIST+=			SAMBA4_PYTHON3="@comment "
 
 .if !defined(SAMBA4_SUBPORT)
 # Require llvm 4.0 and AMD64
-.if ${PORT_OPTIONS:MAESNI} && ${ARCH} == "amd64" && ${OSVERSION} >= 1100511
+.if ${PORT_OPTIONS:MAESNI} && ${ARCH} == "amd64"
 CONFIGURE_ARGS+=		--accel-aes=intelaesni
 PLIST_FILES+=			lib/samba4/private/libaesni-intel-samba4.so
 .else

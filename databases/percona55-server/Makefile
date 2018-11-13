@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME?=	percona
-DISTVERSION=	5.5.60-38.12
+DISTVERSION=	5.5.61-38.13
 PORTREVISION?=	1
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.5/Percona-Server-${DISTVERSION}/source/tarball/
@@ -29,7 +29,7 @@ DATADIR=	${PREFIX}/share/mysql
 CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_DOCREADMEDIR="share/doc/mysql" \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
-		-DINSTALL_INFODIR="info" \
+		-DINSTALL_INFODIR="${INFO_PATH}" \
 		-DINSTALL_LIBDIR="lib/mysql" \
 		-DINSTALL_MANDIR="man" \
 		-DINSTALL_MYSQLDATADIR="/var/db/mysql" \

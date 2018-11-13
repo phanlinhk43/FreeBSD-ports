@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	opensc
-PORTVERSION=	0.18.0
+PORTVERSION=	0.19.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://github.com/OpenSC/OpenSC/releases/download/${PORTVERSION}/
 
@@ -10,6 +10,8 @@ MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Libraries and utilities to access smart cards
 
 LICENSE=	LGPL21
+
+BROKEN_powerpc64=	fails to compile: cc1: unrecognized command line option "-Wno-unused-but-set-variable"
 
 OPTIONS_SINGLE=	BACKEND
 OPTIONS_SINGLE_BACKEND=PCSC OPENCT CTAPI
@@ -31,6 +33,7 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ENV=	\
 		OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto"
+CONFIGURE_ARGS=	--with-completiondir=${PREFIX}/etc/bash_completion.d
 
 PORTDOCS=	*
 
@@ -46,6 +49,7 @@ CTAPI_CONFIGURE_ENABLE=		ctapi
 
 SM_CONFIGURE_ENABLE=		sm
 
+NOTIFY_USES=			gnome
 NOTIFY_USE=			GNOME=glib20
 NOTIFY_CONFIGURE_ENABLE=	notify
 

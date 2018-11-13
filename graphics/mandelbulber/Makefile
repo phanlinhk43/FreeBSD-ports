@@ -14,6 +14,8 @@ COMMENT=	3D Mandelbrot fractal renderer
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		fails to build
+
 USES=		desktop-file-utils gmake pkgconfig
 USE_GNOME=	glib20 gtk20
 BUILD_WRKSRC=	${WRKSRC}/makefiles
@@ -24,6 +26,8 @@ PLIST_FILES=	bin/${PORTNAME} share/applications/${PORTNAME}.desktop
 
 PORTDOCS=	README NEWS
 PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/mandelbulber|${DATADIR}|' \

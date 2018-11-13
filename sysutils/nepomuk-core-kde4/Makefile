@@ -3,11 +3,14 @@
 
 PORTNAME=	nepomuk-core
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	19
+PORTREVISION=	20
 CATEGORIES=	sysutils kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Core Nepomuk system libraries and services for KDE
+
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
 
 LIB_DEPENDS=	libpoppler-qt4.so:graphics/poppler-qt4 \
 		libtag.so:audio/taglib \

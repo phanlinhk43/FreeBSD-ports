@@ -11,7 +11,6 @@
     SUBDIR += alpine
     SUBDIR += altermime
     SUBDIR += amavis-logwatch
-    SUBDIR += annoyance-filter
     SUBDIR += anomy-sanitizer
     SUBDIR += antivirus-milter
     SUBDIR += anubis
@@ -262,7 +261,6 @@
     SUBDIR += mu4e-maildirs
     SUBDIR += mulberry
     SUBDIR += mutt
-    SUBDIR += mutt-lite
     SUBDIR += mutt_vc_query
     SUBDIR += muttils
     SUBDIR += nbsmtp
@@ -381,7 +379,9 @@
     SUBDIR += p5-Mail-Audit
     SUBDIR += p5-Mail-Audit-Attach
     SUBDIR += p5-Mail-Box
+    SUBDIR += p5-Mail-Box-IMAP4
     SUBDIR += p5-Mail-Box-IMAP4-SSL
+    SUBDIR += p5-Mail-Box-POP3
     SUBDIR += p5-Mail-Box-Parser-C
     SUBDIR += p5-Mail-Bulkmail
     SUBDIR += p5-Mail-CheckUser
@@ -404,6 +404,7 @@
     SUBDIR += p5-Mail-MailStats
     SUBDIR += p5-Mail-Mbox-MessageParser
     SUBDIR += p5-Mail-MboxParser
+    SUBDIR += p5-Mail-Message
     SUBDIR += p5-Mail-OpenDKIM
     SUBDIR += p5-Mail-OpenRelay-Simple
     SUBDIR += p5-Mail-POP3Client
@@ -418,6 +419,7 @@
     SUBDIR += p5-Mail-Sendmail
     SUBDIR += p5-Mail-Spool
     SUBDIR += p5-Mail-Tools
+    SUBDIR += p5-Mail-Transport
     SUBDIR += p5-Mail-Transport-Dbx
     SUBDIR += p5-Mail-Verify
     SUBDIR += p5-Mail-Verp
@@ -489,6 +491,7 @@
     SUBDIR += php70-imap
     SUBDIR += php71-imap
     SUBDIR += php72-imap
+    SUBDIR += php73-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
@@ -497,7 +500,6 @@
     SUBDIR += policyd2
     SUBDIR += pop3lite
     SUBDIR += pop3proxy
-    SUBDIR += pop3vscan
     SUBDIR += popa3d
     SUBDIR += popa3d-before-sendmail
     SUBDIR += popcheck
@@ -510,6 +512,7 @@
     SUBDIR += postfix
     SUBDIR += postfix-current
     SUBDIR += postfix-current-sasl
+    SUBDIR += postfix-ldap-sasl
     SUBDIR += postfix-logwatch
     SUBDIR += postfix-policyd-sf
     SUBDIR += postfix-policyd-spf-perl

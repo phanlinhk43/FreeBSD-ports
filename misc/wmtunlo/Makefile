@@ -3,10 +3,9 @@
 
 PORTNAME=	wmtunlo
 PORTVERSION=	0.1.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	misc windowmaker
-MASTER_SITES=	http://www.gnu-darwin.org/distfiles/ \
-		http://cvsup.theplanet.com/distfiles/
+MASTER_SITES=	http://www.gnu-darwin.org/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Falling-down-a-tunnel dockapp

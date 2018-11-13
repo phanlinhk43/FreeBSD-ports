@@ -2,19 +2,19 @@
 # $FreeBSD$
 
 PORTNAME=	RDF-Trine
-PORTVERSION=	1.015
-PORTREVISION=	2
+PORTVERSION=	1.019
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tj@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	RDF Framework for Perl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Algorithm-Combinatorics>=0:math/p5-Algorithm-Combinatorics \
+BUILD_DEPENDS=	${RUN_DEPENDS}
+RUN_DEPENDS=	p5-Algorithm-Combinatorics>=0:math/p5-Algorithm-Combinatorics \
 		p5-Cache-LRU>=0.04:devel/p5-Cache-LRU \
 		p5-DBD-SQLite>=1.14:databases/p5-DBD-SQLite \
 		p5-DBI>=0:databases/p5-DBI \
@@ -22,6 +22,7 @@ BUILD_DEPENDS=	p5-Algorithm-Combinatorics>=0:math/p5-Algorithm-Combinatorics \
 		p5-Data-UUID>=0:devel/p5-Data-UUID \
 		p5-Error>=0:lang/p5-Error \
 		p5-HTTP-Negotiate>=0:www/p5-HTTP-Negotiate \
+		p5-IRI>=0:devel/p5-IRI \
 		p5-JSON>=2.0:converters/p5-JSON \
 		p5-List-MoreUtils>=0.413:lang/p5-List-MoreUtils \
 		p5-Log-Log4perl>=0:devel/p5-Log-Log4perl \
@@ -38,10 +39,10 @@ BUILD_DEPENDS=	p5-Algorithm-Combinatorics>=0:math/p5-Algorithm-Combinatorics \
 		p5-XML-Namespace>=0:textproc/p5-XML-Namespace \
 		p5-XML-SAX>=0.96:textproc/p5-XML-SAX \
 		p5-libwww>=0:www/p5-libwww
-RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-NO_ARCH=	yes
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

@@ -3,6 +3,7 @@
 
 PORTNAME=	eduke32
 PORTVERSION=	20180809
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://dukeworld.duke4.net/eduke32/synthesis/${PORTVERSION}-${SVNREVISION}/:eduke32 \
 		http://www.duke4.org/files/nightfright/hrp/:hrp \
@@ -50,6 +51,8 @@ OPTIONS_DEFINE_i386=	ASM
 OPTIONS_DEFAULT_i386=	ASM
 OPTIONS_DEFAULT_amd64=	GCC
 OPTIONS_DEFAULT_powerpc=	GCC
+OPTIONS_DEFAULT_powerpcspe=	GCC
+OPTIONS_DEFAULT_powerpc64=	GCC
 OPTIONS_DEFAULT_sparc64=	GCC
 
 ASM_BUILD_DEPENDS=	nasm:devel/nasm

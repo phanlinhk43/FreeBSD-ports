@@ -3,7 +3,7 @@
 
 PORTNAME=	ffmpegthumbs
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia kde kde-kde4
 PKGNAMEPREFIX=	kdemultimedia-
 PKGNAMESUFFIX=	-kde4
@@ -12,6 +12,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	FFmpeg-based thumbnail generator for video files
 
 LICENSE=	GPLv2
+
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
 
 LIB_DEPENDS=	libswscale.so:multimedia/ffmpeg
 

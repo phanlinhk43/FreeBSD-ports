@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	radare-cutter
-PORTVERSION=	1.5
+PORTVERSION=	1.7.1
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	x11
@@ -14,13 +14,14 @@ LICENSE_FILE=	${WRKSRC}/../COPYING
 
 LIB_DEPENDS=	libr_bin.so:devel/radare2
 
-USES=		pkgconfig python:3.4+ qmake:outsource qt:5
+USES=		gl pkgconfig python:3.4+ qmake:outsource qt:5
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	radareorg
 GH_PROJECT=	cutter
 
-USE_QT=		buildtools_build core gui location network qml quick svg \
-		webchannel webengine widgets
+USE_QT=		buildtools_build core declarative gui location network printsupport \
+		svg webchannel webengine widgets
 USE_GL=		gl
 
 WRKSRC_SUBDIR=	src

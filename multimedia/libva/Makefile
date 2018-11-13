@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libva
-PORTVERSION=	2.2.0
+PORTVERSION=	2.3.0
 PORTREVISION=	1
 CATEGORIES=	multimedia
 
@@ -24,13 +24,14 @@ USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	01org
+GH_ACCOUNT=	intel
 
 LDFLAGS+=	-lpthread
 # prevent types conflict: videodev2.h vs. drm.h
 CFLAGS+=	-DHAVE_LINUX_INTEGER_TYPES
 
 OPTIONS_DEFINE=	DEBUG WAYLAND
+OPTIONS_DEFAULT=WAYLAND
 WAYLAND_DESC=	Support wayland protocol
 OPTIONS_SUB=	yes
 

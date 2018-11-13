@@ -9,12 +9,11 @@
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
     SUBDIR += IPA
-    SUBDIR += ImageMagick
-    SUBDIR += ImageMagick-nox11
+    SUBDIR += ImageMagick6
+    SUBDIR += ImageMagick6-nox11
     SUBDIR += ImageMagick7
     SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
-    SUBDIR += OpenEXR
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
     SUBDIR += R-cran-RColorBrewer
@@ -84,7 +83,6 @@
     SUBDIR += cadubi
     SUBDIR += caffe
     SUBDIR += cairo
-    SUBDIR += cairo-reference
     SUBDIR += cairomm
     SUBDIR += cal3d
     SUBDIR += camera
@@ -95,6 +93,7 @@
     SUBDIR += cegui
     SUBDIR += cenon
     SUBDIR += cfdg
+    SUBDIR += charls
     SUBDIR += chbg
     SUBDIR += cimg
     SUBDIR += cinepaint
@@ -154,6 +153,7 @@
     SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-devel-kmod
+    SUBDIR += drm-kmod
     SUBDIR += drm-legacy-kmod
     SUBDIR += drm-next-kmod
     SUBDIR += drm-stable-kmod
@@ -239,7 +239,6 @@
     SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
-    SUBDIR += gegl3
     SUBDIR += generic_image_decoder
     SUBDIR += geoapi
     SUBDIR += geomorph
@@ -290,12 +289,13 @@
     SUBDIR += gmic
     SUBDIR += gmic-qt
     SUBDIR += gmt
+    SUBDIR += gmt5
+    SUBDIR += gmt5-dcw
+    SUBDIR += gmt5-gshhg
     SUBDIR += gnash
     SUBDIR += gnofract4d
     SUBDIR += gnome-color-manager
     SUBDIR += gnome-video-effects
-    SUBDIR += gnustep-slideshow
-    SUBDIR += gnustep-slideshowkit
     SUBDIR += gocr
     SUBDIR += goocanvas
     SUBDIR += goocanvas2
@@ -342,6 +342,7 @@
     SUBDIR += gstreamer1-plugins-openjpeg
     SUBDIR += gstreamer1-plugins-png
     SUBDIR += gstreamer1-plugins-rsvg
+    SUBDIR += gstreamer1-plugins-vulkan
     SUBDIR += gstreamer1-plugins-webp
     SUBDIR += gstreamer1-plugins-zbar
     SUBDIR += gthumb
@@ -670,6 +671,7 @@
     SUBDIR += opencv-core
     SUBDIR += opencv-java
     SUBDIR += opendx
+    SUBDIR += openexr
     SUBDIR += openfx-arena
     SUBDIR += openfx-io
     SUBDIR += openfx-misc
@@ -691,6 +693,7 @@
     SUBDIR += osgearth
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
+    SUBDIR += p5-Algorithm-Line-Bresenham
     SUBDIR += p5-Alien-Gimp
     SUBDIR += p5-Barcode-ZBar
     SUBDIR += p5-CAD-Drawing
@@ -835,6 +838,8 @@
     SUBDIR += php71-gd
     SUBDIR += php72-exif
     SUBDIR += php72-gd
+    SUBDIR += php73-exif
+    SUBDIR += php73-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -989,6 +994,7 @@
     SUBDIR += quesa
     SUBDIR += quesoglc
     SUBDIR += qxv
+    SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += raster3d
     SUBDIR += rawstudio
@@ -1122,8 +1128,11 @@
     SUBDIR += vigra
     SUBDIR += vips
     SUBDIR += visprint
+    SUBDIR += vkd3d
     SUBDIR += volpack
     SUBDIR += vp
+    SUBDIR += vulkan-loader
+    SUBDIR += vv
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += wayland

@@ -1,14 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	8.11.4
+PORTVERSION=	8.12.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	8
-
-PATCH_SITES=	https://github.com/nodejs/node/commit/
-PATCHFILES=	b8f47b27571f.patch:-p1
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server (8.x LTS)
@@ -22,14 +20,10 @@ OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=DTRACE
 OPTIONS_SUB=	yes
 
-OPTIONS_DEFAULT_FreeBSD_10=	BUNDLED_SSL
-OPTIONS_DEFAULT+=		${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
-
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif
 
-OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
 OPTIONS_EXCLUDE_aarch64=	DTRACE
 # dt_modtext:/usr/src/cddl/contrib/opensolaris/lib/libdtrace/common/dt_link.c(820): arm not implemented
 OPTIONS_EXCLUDE_armv6=		DTRACE
@@ -50,12 +44,13 @@ USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
 
 HAS_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	node[456]-[0-9]* node-[0-9]*
+CONFLICTS_INSTALL=	node6-[0-9]* node10-[0-9]* node-[0-9]*
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \
 		--shared-cares \
 		--shared-libuv \
+		--shared-nghttp2 \
 		--shared-zlib
 
 SHEBANG_FILES=	tools/specialize_node_d.py tools/genv8constants.py
@@ -65,15 +60,12 @@ REINPLACE_ARGS=	-i ''
 MAKE_ENV+=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 
 LIB_DEPENDS+=	libcares.so:dns/c-ares\
-		libuv.so:devel/libuv
+		libuv.so:devel/libuv \
+		libnghttp2.so:www/libnghttp2
 
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MBUNDLED_SSL)
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100085 && ${SSL_DEFAULT} == base
-IGNORE=		node.js requires openssl 1.0.2, add DEFAULT_VERSIONS+=ssl=openssl to /etc/make.conf or enable BUNDLED_SSL option
-.endif
 
 .if !empty(SSL_DEFAULT:Mlibressl*)
 IGNORE=		cannot build node.js with LibreSSL. You must enable BUNDLED_SSL

@@ -3,7 +3,7 @@
 
 PORTNAME=	WinFF
 PORTVERSION=	1.5.5
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 MASTER_SITES=	http://winff.org/docs/source/
@@ -45,6 +45,8 @@ USE_FPC+=	cairo
 USE_GNOME+=	cairo
 INSTALLS_ICONS=yes
 .endif
+
+OPTIONS_DEFINE=	DOCS
 
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' ${BUILD_WRKSRC}/unit1.pas

@@ -3,7 +3,7 @@
 
 PORTNAME=	chromium
 PORTVERSION=	68.0.3440.106
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES?=	www
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		LOCAL/cpm/chromium/:fonts
@@ -69,10 +69,11 @@ ONLY_FOR_ARCHS=			aarch64 amd64 i386
 .endif
 
 .if defined(GN_ONLY)
-USES=		compiler:c++14-lang ninja pkgconfig python:2.7,build shebangfix tar:xz
-.else
-USES=		bison cpe desktop-file-utils jpeg ninja perl5 pkgconfig \
+USES=		compiler:c++14-lang localbase:ldflags ninja pkgconfig \
 		python:2.7,build shebangfix tar:xz
+.else
+USES=		bison cpe desktop-file-utils gnome jpeg localbase:ldflags \
+		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz
 .endif
 MAKE_ARGS=	-C out/${BUILDTYPE}
 BINARY_ALIAS=	python=${PYTHON_CMD}
@@ -120,8 +121,8 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_system_freetype=true \
 		use_system_harfbuzz=true \
 		use_system_libjpeg=true \
-		extra_cxxflags="-I${LOCALBASE}/include" \
-		extra_ldflags="-L${LOCALBASE}/lib"
+		extra_cxxflags="${CXXFLAGS}" \
+		extra_ldflags="${LDFLAGS}"
 # TODO: investigate building with these options:
 # use_system_minigbm
 GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild
@@ -196,21 +197,15 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 .endif
 
-TEST_ALL_TARGET=	base_unittests
+.include "Makefile.tests"
+TEST_ALL_TARGET=	${TEST_TARGETS}
 TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX} \
 			test_fonts${EXTRACT_SUFX}:fonts
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1101513
-BUILD_DEPENDS+=	clang60:devel/llvm60
-CC=             clang60
-CXX=            clang++60
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-llvm-port
-.else
 BUILD_DEPENDS+=	${LOCALBASE}/bin/ar:devel/binutils
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-llvm-base
-.endif
 
 # TODO: -isystem, would be just as ugly as this approach, but more reliably
 # build would fail without C_INCLUDE_PATH/CPLUS_INCLUDE_PATH env var set.

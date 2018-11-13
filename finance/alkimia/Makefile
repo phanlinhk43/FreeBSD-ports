@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 # Depending on ecm via USE_KDE causes unwanted CMAKE_ARGS to be set
 BUILD_DEPENDS=	${LOCALBASE}/share/ECM/cmake/ECMConfig.cmake:devel/kf5-extra-cmake-modules
 
-USES=		cmake:outsource pathfix tar:xz
+USES=		cmake:outsource compiler:c++11-lang pathfix tar:xz
 USE_LDCONFIG=	yes
 
 SLAVE?=		qt5
@@ -54,7 +54,6 @@ MPIR_DESC=		MPIR (multiple precision arithmetic) support
 MPIR_LIB_DEPENDS=	libmpir.so:math/mpir
 
 .if ${SLAVE} == qt4
-TEST_USES=	qt:4 qt:5
 TEST_USE=		QT=qtestlib
 .else
 TEST_USE=		QT=testlib

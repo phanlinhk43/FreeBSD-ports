@@ -9,7 +9,7 @@ COMMENT=	KDE instant messaging account management module
 
 LIB_DEPENDS=	libaccounts-qt5.so:net-im/libaccounts-qt5 \
 		libkaccounts.so:net-im/kaccounts-integration \
-		libtelepathy-qt5.so:net-im/telepathy-qt5 \
+		libtelepathy-qt5.so:net-im/telepathy-qt@qt5 \
 		libtelepathy-logger-qt.so:net-im/telepathy-logger-qt5 \
 		libKTpCommonInternals.so:net-im/ktp-common-internals \
 		libKF5AkonadiPrivate.so:databases/akonadi \
@@ -23,11 +23,11 @@ USE_GNOME=	intltool
 USE_KDE=	auth codecs config configwidgets coreaddons ecm i18n \
 		iconthemes itemviews kcmutils kio notifications notifyconfig \
 		service texteditor wallet widgetsaddons windowsystem
-USE_QT=		core dbus gui network qml sql widgets xml \
+USE_QT=		core dbus declarative gui network sql widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	HAZE IRC JABBER SALUT
+OPTIONS_DEFINE=	HAZE IRC JABBER SALUT DOCS
 OPTIONS_DEFAULT=JABBER
 
 HAZE_DESC=	libpurple protocols support

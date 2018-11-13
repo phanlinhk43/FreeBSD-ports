@@ -3,7 +3,7 @@
 PORTNAME=	l-smash-works
 DISTVERSION=	0.0-935 # git rev-list --count HEAD
 DISTVERSIONSUFFIX=	-g3edd194
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	vapoursynth-
 
@@ -44,6 +44,8 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 PLIST_FILES=	lib/libvslsmashsource.so.${PORTVERSION:E} \
 		%%DATADIR%%/libvslsmashsource.so
 PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -Ee '/CROSS/!s/^(CC|LD|REV|HASH)=.*/: $${&}/' \

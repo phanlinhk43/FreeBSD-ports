@@ -14,8 +14,8 @@ man/man1/ebrowse.1.gz
 man/man1/emacs.1.gz
 man/man1/emacsclient.1.gz
 man/man1/etags.1.gz
-share/appdata/emacs.appdata.xml
 share/applications/emacs.desktop
+share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/%%ETCDIR%%-buffer.gdb
 %%DATADIR%%/%%EMACS_VER%%/%%ETCDIR%%.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/%%ETCDIR%%.desktop
@@ -1494,6 +1494,8 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/avl-tree.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backquote.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backquote.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backtrace.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backtrace.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/benchmark.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/benchmark.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/bindat.el.gz
@@ -2652,6 +2654,8 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/mpc.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/msb.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/msb.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/multifile.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/multifile.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/mwheel.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/mwheel.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/ange-ftp.el.gz
@@ -3681,6 +3685,8 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/underline.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/thingatpt.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/thingatpt.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/thread.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/thread.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/thumbs.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/thumbs.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/time-stamp.el.gz
@@ -3897,13 +3903,13 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/xwidget.elc
 %%DATADIR%%/%%EMACS_VER%%/site-lisp/subdirs.el
 %%DATADIR%%/site-lisp/subdirs.el
-%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backtrace.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/backtrace.elc
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/site-lisp/site-start.el
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/alloc.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/atimer.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/atimer.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/bidi.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/bignum.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/bignum.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/blockinput.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/buffer.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/buffer.h
@@ -4051,6 +4057,7 @@ share/applications/emacs.desktop
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/textprop.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/thread.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/thread.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/timefns.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/tparam.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/tparam.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/undo.c
@@ -4111,6 +4118,7 @@ share/applications/emacs.desktop
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/xterm.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/xwidget.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/xwidget.h
+include/emacs-module.h
 share/icons/hicolor/128x128/apps/emacs.png
 share/icons/hicolor/16x16/apps/emacs.png
 share/icons/hicolor/24x24/apps/emacs.png

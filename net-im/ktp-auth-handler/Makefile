@@ -8,7 +8,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KWallet integration module for KDE Telepathy
 
 LIB_DEPENDS=	libqca-qt5.so:devel/qca@qt5 \
-		libtelepathy-qt5.so:net-im/telepathy-qt5 \
+		libtelepathy-qt5.so:net-im/telepathy-qt@qt5 \
 		libKTpCommonInternals.so:net-im/ktp-common-internals  \
 		libaccounts-qt5.so:net-im/libaccounts-qt5 \
 		libkaccounts.so:net-im/kaccounts-integration \
@@ -19,5 +19,7 @@ USE_KDE=	completion config coreaddons ecm i18n jobwidgets kdewebkit \
 		kio wallet service widgetsaddons
 USE_QT=		core dbus gui network webkit widgets xml \
 		buildtools_build qmake_build
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

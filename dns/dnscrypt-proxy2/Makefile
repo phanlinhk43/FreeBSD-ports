@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dnscrypt-proxy
-PORTVERSION=	2.0.16
+PORTVERSION=	2.0.17
 CATEGORIES=	dns security ipv6
 PKGNAMESUFFIX=	2
 
@@ -13,10 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	ca_root_nss>=3.35:security/ca_root_nss
 
-USE_RC_SUBR=	${PORTNAME}
-
 USES=		go
+USE_RC_SUBR=	${PORTNAME}
 USE_GITHUB=	yes
+
 GH_ACCOUNT=	jedisct1
 
 USERS=		_dnscrypt-proxy
@@ -37,7 +37,7 @@ do-build:
 	${RLN} ${WRKSRC}/vendor ${WRKSRC}/src
 	cd ${WRKSRC}/${PORTNAME} && \
 	  ${SETENV} ${MAKE_ENV} ${GO_ENV} GOPATH=${WRKSRC} \
-	  ${GO_CMD} build -ldflags "-s -w" -o ${WRKDIR}/sbin/${PORTNAME}
+	  ${GO_CMD} build ${GO_BUILDFLAGS} -o ${WRKDIR}/sbin/${PORTNAME}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/sbin/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin

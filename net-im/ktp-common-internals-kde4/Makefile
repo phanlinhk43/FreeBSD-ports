@@ -10,7 +10,10 @@ PKGNAMESUFFIX=	-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Telepathy internal library
 
-LIB_DEPENDS=	libtelepathy-qt4.so:net-im/telepathy-qt4 \
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
+
+LIB_DEPENDS=	libtelepathy-qt4.so:net-im/telepathy-qt@qt4 \
 		libtelepathy-logger-qt4.so:net-im/telepathy-logger-qt4
 RUN_DEPENDS=	${LOCALBASE}/libexec/mission-control-5:net-im/telepathy-mission-control
 

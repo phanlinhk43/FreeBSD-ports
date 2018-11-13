@@ -8,7 +8,10 @@ CATEGORIES=	net kde kde-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	VNC server for KDE
 
-LIB_DEPENDS=	libtelepathy-qt4.so:net-im/telepathy-qt4
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
+
+LIB_DEPENDS=	libtelepathy-qt4.so:net-im/telepathy-qt@qt4
 
 USES=		alias cmake:outsource jpeg kde:4 qt:4 tar:xz
 USE_KDE=	kdelibs automoc4

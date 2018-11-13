@@ -3,6 +3,7 @@
 
 PORTNAME=	bc
 DISTVERSION=	1.07.1
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	gnu
@@ -12,6 +13,8 @@ COMMENT=	GNU bc/dc calculator
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_powerpc64=	fails to build: tests fail with error code 2
 
 USES=		libedit makeinfo
 GNU_CONFIGURE=	yes

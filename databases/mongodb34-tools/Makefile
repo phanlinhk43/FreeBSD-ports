@@ -10,8 +10,8 @@ COMMENT=	Tools for MongoDB
 
 LICENSE=	APACHE20
 
-BROKEN_SSL=	openssl-devel libressl libressl-devel
-BROKEN_SSL_REASON_openssl-devel=	variable has incomplete type 'BIO_METHOD' (aka 'struct bio_method_st')
+BROKEN_SSL=	openssl111 libressl libressl-devel
+BROKEN_SSL_REASON_openssl111=	variable has incomplete type 'BIO_METHOD' (aka 'struct bio_method_st')
 BROKEN_SSL_REASON_libressl=		could not determine kind of name for C.EVP_sha
 BROKEN_SSL_REASON_libressl-devel=	${BROKEN_SSL_REASON_libressl}
 
@@ -23,7 +23,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	mongodb
 GH_PROJECT=	mongo-tools
 
-OPTIONS_DEFINE=	SSL SASL
+OPTIONS_DEFINE=	SSL SASL DOCS
 OPTIONS_DEFAULT=	SSL SASL
 
 SASL_USE=	my_tags=sasl

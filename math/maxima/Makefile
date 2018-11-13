@@ -3,6 +3,7 @@
 
 PORTNAME=	maxima
 PORTVERSION=	5.41.0
+PORTREVISION=	1
 CATEGORIES=	math lisp tk
 MASTER_SITES=	SF/maxima/Maxima-source/${PORTVERSION}-source
 
@@ -25,7 +26,9 @@ CONFIGURE_ARGS=	--with-posix-shell=/bin/sh \
 		${LISPSELECT}
 TEST_TARGET=	check
 
-INFO=		maxima imaxima xmaxima
+INFO=		maxima imaxima xmaxima \
+		abs_integrate drawutils \
+		kovacicODE logic
 
 PLIST_SUB=	BINDIR=${BINDIRECTORY}
 PLIST_SUB+=	LISPBIN=${LISPBINARY}
@@ -35,26 +38,16 @@ PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 PORTDATA=	*
 
 OPTIONS_SINGLE=		LISP
-OPTIONS_SINGLE_LISP=	CLISP CMUCL SBCL
+OPTIONS_SINGLE_LISP=	CMUCL SBCL
 
 OPTIONS_DEFAULT=	SBCL
 
-CLISP_DESC=	Build with Clisp
 CMUCL_DESC=	Build with CMU Common Lisp
 SBCL_DESC=	Build with Steel Bank Common Lisp
 
 .include <bsd.port.pre.mk>
 
 # Lisp to build with. Define only ONE of these!
-.if ${PORT_OPTIONS:MCLISP}
-LISPSELECT=	--enable-clisp
-LISPPORT=	clisp:lang/clisp
-BINDIRECTORY=	binary-clisp
-LISPBINARY=	lisp.run
-PLIST_SUB+=	LISPBINARY=""
-MAXIMABINARY=	maxima.mem
-.endif
-
 .if ${PORT_OPTIONS:MCMUCL}
 LISPSELECT=	--enable-cmucl
 LISPPORT=	lisp:lang/cmucl
@@ -84,12 +77,6 @@ BINDIRECTORY=	binary-sbcl
 #LISPBINARY is null so fudge this so deinstall works cleanly
 PLIST_SUB+=	LISPBINARY="@comment "
 MAXIMABINARY=	maxima_core
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
-# The older makeinfo from the base fails in 10.3
-BUILD_DEPENDS+=	${LOCALBASE}/bin/makeinfo:print/texinfo
-CONFIGURE_ENV+=	MAKEINFO="${LOCALBASE}/bin/makeinfo"
 .endif
 
 post-patch:

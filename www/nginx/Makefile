@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.14.0
-PORTREVISION?=	11
+PORTVERSION=	1.14.1
+PORTREVISION?=	0
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/ \
@@ -14,6 +14,9 @@ MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Robust and small WWW server
 
 LICENSE=	BSD2CLAUSE
+
+BROKEN_mips=	error ngx_spinlock() or ngx_atomic_cmp_set() are not defined
+BROKEN_mips64=	error ngx_spinlock() or ngx_atomic_cmp_set() are not defined
 
 CONFLICTS_INSTALL=	nginx-devel
 
@@ -197,6 +200,12 @@ _addextmod=	add-module
 CONFIGURE_ARGS+=	--with-${mod}${_addbasemod}
 .endfor
 
+# Some modules depend on other being there before, for example, devel_kit needs
+# to be there before a few other.
+.for mod in ${FIRST_DSO_EXTMODS}
+CONFIGURE_ARGS+=	--${_addextmod}=${WRKSRC_${mod}}${${mod:tu}_SUBDIR}
+.endfor
+
 .for mod in ${DSO_EXTMODS}
 CONFIGURE_ARGS+=	--${_addextmod}=${WRKSRC_${mod}}${${mod:tu}_SUBDIR}
 .endfor
@@ -208,10 +217,6 @@ CONFIGURE_ARGS+=	--${_addextmod}=${WRKDIR}/${moddir}
 .if empty(PORT_OPTIONS:MHTTP) && empty(PORT_OPTIONS:MMAIL)
 IGNORE=		requires at least HTTP or MAIL to \
 		be defined.  Please do 'make config' again
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100085 && ${SSL_DEFAULT} == base && ${PORT_OPTIONS:MCT}
-IGNORE=		CT option requires OpenSSL 1.0.2, add DEFAULT_VERSIONS+=ssl=openssl to /etc/make.conf
 .endif
 
 .if !${PORT_OPTIONS:MHTTP_REWRITE} && !defined(USE_HTTP_REWRITE)

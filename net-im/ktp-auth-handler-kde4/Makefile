@@ -10,9 +10,12 @@ PKGNAMESUFFIX=	-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KWallet integration module for KDE Telepathy
 
+DEPRECATED=	KDE4 is EOL upstream
+EXPIRATION_DATE=	2018-12-31
+
 LIB_DEPENDS=	libqjson.so:devel/qjson \
 		libqca.so:devel/qca \
-		libtelepathy-qt4.so:net-im/telepathy-qt4 \
+		libtelepathy-qt4.so:net-im/telepathy-qt@qt4 \
 		libktpcommoninternalsprivate.so:net-im/ktp-common-internals-kde4
 
 USES=		cmake gettext kde:4 qt:4 tar:bzip2

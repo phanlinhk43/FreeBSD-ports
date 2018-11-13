@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	babl
-PORTVERSION=	0.1.48
-PORTREVISION=	1
+PORTVERSION=	0.1.58
 CATEGORIES=	x11
 MASTER_SITES=	GIMP
 
@@ -25,6 +24,10 @@ OPTIONS_DEFINE=	SIMD
 .if !${PORT_OPTIONS:MSIMD}
 CONFIGURE_ARGS+=--disable-mmx \
 		--disable-sse \
+		--disable-sse2 \
+		--disable-sse3 \
+		--disable-sse4.1 \
+		--disable-f16c \
 		--disable-altivec
 .endif
 

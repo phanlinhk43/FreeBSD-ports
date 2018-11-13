@@ -3,6 +3,7 @@
 
 PORTNAME=	freerdp
 DISTVERSION=	2.0.0-rc3
+PORTREVISION=	4
 CATEGORIES=	net comms ipv6
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -12,6 +13,8 @@ COMMENT=	Free implementation of Remote Desktop Protocol
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim
 
 USES=		alias cmake:outsource compiler:c++11-lib cpe gettext localbase pathfix pkgconfig ssl
 USE_LDCONFIG=	yes
@@ -73,8 +76,7 @@ SSE_CMAKE_BOOL=		WITH_SSE2
 
 WAYLAND_DESC=		Build FreeRDP Wayland client
 WAYLAND_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
-WAYLAND_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
-			libwayland-client.so:graphics/wayland \
+WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 			libwayland-cursor.so:graphics/wayland \
 			libxkbcommon.so:x11/libxkbcommon
 WAYLAND_CMAKE_BOOL=	WITH_WAYLAND
@@ -83,17 +85,6 @@ X11_DESC=		Build FreeRDP X11 client
 X11_CMAKE_BOOL=		WITH_X11
 X11_CMAKE_OFF=		-DWITH_XKBFILE=OFF
 X11_USE=		xorg=x11,xcursor,xext,xorgproto,xfixes,xi,xinerama,xkbfile,xrandr,xrender,xv
-
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == "FreeBSD" && ${ARCH} == "armv6"
-.if ${OSVERSION} < 1100500 || \
-	(${OSVERSION} >= 1100500 && ${OSVERSION} < 1100504) || \
-	(${OSVERSION} >= 1200000 && ${OSVERSION} < 1200008)
-BROKEN=	Fails to build on ARMv6 (libm bug). See: r305380 (HEAD), r305971 (stable/11) [\#199422, \#211965] \
-	Please update to a later (fixed) version.
-.endif
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/CMAKE_INSTALL_RPATH /d' \
@@ -111,4 +102,4 @@ post-patch:
 		${WRKSRC}/server/shadow/CMakeLists.txt \
 		${WRKSRC}/libfreerdp/CMakeLists.txt
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
