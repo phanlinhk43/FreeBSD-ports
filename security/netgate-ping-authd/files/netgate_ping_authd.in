@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: netgate_ping_authd
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# netgate_ping_authd_enable (bool):	Set to NO by default.
+#					Set it to YES to enable doormand.
+
+. /etc/rc.subr
+
+name=netgate_ping_authd
+rcvar=netgate_ping_authd_enable
+
+load_rc_config $name
+
+: ${netgate_ping_authd_enable:=NO}
+
+command=%%PREFIX%%/bin/ping-authd
+pidfile=/var/run/${name}.pid
+
+start_cmd=netgate_ping_authd_start
+
+netgate_ping_authd_start()
+{
+	/usr/local/bin/setuidgid pingauth \
+	    /usr/local/bin/cgi-fcgi -start -connect 127.0.0.1:9000 \
+	    /usr/local/bin/ping-authd
+}
+
+run_rc_command "$1"
