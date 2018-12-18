@@ -536,7 +536,7 @@ nexus:*:575:575::0:0:Nexus Repository Manager OSS:/nonexistent:/usr/sbin/nologin
 assp:*:587:587::0:0:ASSP Anti-Spam Proxy:/var/db/assp:/usr/sbin/nologin
 avahi-autoipd:*:588:588::0:0:Avahi Autoipd Daemon user:/nonexistent:/usr/sbin/nologin
 # free: 589
-# free: 590
+pingauth:*:590:590::0:0:ping-authd authentication daemon:/nonexistent:/usr/sbin/nologin
 # free: 591
 # free: 592
 # free: 593
