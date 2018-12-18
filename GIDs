@@ -530,7 +530,7 @@ nexus:*:575:
 assp:*:587:
 avahi-autoipd:*:588:
 # free: 589
-# free: 590
+pingauth:*:590:
 # free: 591
 # free: 592
 # free: 593
