@@ -2,14 +2,12 @@
 
 PORTNAME=	network
 DISTVERSION=	${QT5_VERSION}
+PORTREVISION=	4
 CATEGORIES=	net ipv6
 PKGNAMEPREFIX=	qt5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt network module
-
-BROKEN_SSL=	openssl111
-BROKEN_SSL_REASON_openssl111=	error: member access into incomplete type 'X509' (aka 'x509_st')
 
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 

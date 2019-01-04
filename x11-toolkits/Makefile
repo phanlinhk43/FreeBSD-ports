@@ -11,6 +11,7 @@
     SUBDIR += blt
     SUBDIR += bwidget
     SUBDIR += c++-gtk-utils
+    SUBDIR += ctk
     SUBDIR += diorite
     SUBDIR += flowcanvas
     SUBDIR += fltk
@@ -37,7 +38,6 @@
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
     SUBDIR += gtk-sharp30
-    SUBDIR += gtk12
     SUBDIR += gtk20
     SUBDIR += gtk20-reference
     SUBDIR += gtk30
@@ -142,7 +142,6 @@
     SUBDIR += p5-Gnome2-Canvas
     SUBDIR += p5-Gnome2-VFS
     SUBDIR += p5-Gnome2-Wnck
-    SUBDIR += p5-Gtk-Perl
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
     SUBDIR += p5-Gtk2-Ex-Dialogs
@@ -244,6 +243,7 @@
     SUBDIR += qtermwidget-l10n
     SUBDIR += qwt5
     SUBDIR += qwt5-designerplugin
+    SUBDIR += qwt5-qt5
     SUBDIR += qwt6
     SUBDIR += rep-gtk2
     SUBDIR += rubygem-gdk3
@@ -285,8 +285,6 @@
     SUBDIR += vte
     SUBDIR += vte-reference
     SUBDIR += vte3
-    SUBDIR += vtkfox
-    SUBDIR += wlc
     SUBDIR += wmapp
     SUBDIR += wxgtk28
     SUBDIR += wxgtk28-common

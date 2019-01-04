@@ -39,7 +39,6 @@
     SUBDIR += doulos
     SUBDIR += doulos-compact
     SUBDIR += droid-fonts-ttf
-    SUBDIR += emojione-color-font-ttf
     SUBDIR += encodings
     SUBDIR += exo
     SUBDIR += fantasque-sans-mono
@@ -104,7 +103,6 @@
     SUBDIR += geminifonts
     SUBDIR += gentium-basic
     SUBDIR += gentium-plus
-    SUBDIR += gfe
     SUBDIR += gnu-unifont
     SUBDIR += gnu-unifont-ttf
     SUBDIR += gofont-ttf
@@ -172,6 +170,15 @@
     SUBDIR += psftools
     SUBDIR += py-QtAwesome
     SUBDIR += py-bdflib
+    SUBDIR += py-booleanOperations
+    SUBDIR += py-compreffor
+    SUBDIR += py-cu2qu
+    SUBDIR += py-defcon
+    SUBDIR += py-fontMath
+    SUBDIR += py-fontmake
+    SUBDIR += py-glyphsLib
+    SUBDIR += py-ufo2ft
+    SUBDIR += py-ufoLib
     SUBDIR += raleway
     SUBDIR += roboto-fonts-ttf
     SUBDIR += sgifonts
@@ -184,6 +191,8 @@
     SUBDIR += stix-fonts
     SUBDIR += suxus
     SUBDIR += symbola
+    SUBDIR += tamsyn
+    SUBDIR += tamzen
     SUBDIR += terminus-font
     SUBDIR += terminus-ttf
     SUBDIR += tkfont

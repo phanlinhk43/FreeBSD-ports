@@ -12,16 +12,13 @@ COMMENT=	Library implementing the SSH1 and SSH2 protocol
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_SSL=	openssl111
-BROKEN_SSL_REASON_openssl111=	error: variable has incomplete type 'EVP_MD_CTX' (aka 'struct evp_md_ctx_st')
-
 OPTIONS_DEFINE=	SSH1 STATIC
 OPTIONS_RADIO=	CRYPTO
 OPTIONS_RADIO_CRYPTO=	GCRYPT OPENSSL
 OPTIONS_DEFAULT=	OPENSSL STATIC
 OPTIONS_SUB=	yes
 
-USES=		cmake:outsource cpe tar:xz
+USES=		cmake cpe tar:xz
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DWITH_EXAMPLES:BOOL=OFF \

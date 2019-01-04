@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	code_saturne
-PORTVERSION=	5.3.0
+PORTVERSION=	5.3.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science parallel
 
@@ -11,7 +12,6 @@ COMMENT=	EDF's general purpose Computational Fluid Dynamics (CFD) software
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	python:lang/python
 LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo	\
 		libcgns.so:science/cgnslib	\
 		libhdf5.so:science/hdf5		\
@@ -31,6 +31,7 @@ USE_PYQT=	core gui sip widgets xml_build
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+BINARY_ALIAS=	python=${PYTHON_CMD}
 
 OPTIONS_DEFINE=		DOCS EXAMPLES ATLAS BATCH MPI
 OPTIONS_DEFAULT=	BATCH MPI METIS
@@ -49,7 +50,7 @@ PARMETIS_CONFIGURE_ON=	--with-metis-include="${LOCALBASE}/include/parmetis"	\
 			--with-metis-lib="${LOCALBASE}/lib/parmetis"
 PARMETIS_CONFIGURE_ENV=	LIBS=-lexecinfo
 
-#TEST_TARGET=	check
+TEST_TARGET=	check
 
 .if defined(PACKAGE_BUILDING)
 TERM=		vt100	# Force for pointyhat to override su

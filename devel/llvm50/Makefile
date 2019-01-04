@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	5.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	https://releases.llvm.org/${LLVM_RELEASE}/${RCDIR} LOCAL/brooks
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -28,7 +28,7 @@ LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
-USES=		cmake:outsource compiler:c++11-lib libedit perl5 tar:xz \
+USES=		cmake compiler:c++11-lib libedit perl5 tar:xz \
 		shebangfix
 _USES_PYTHON?=	python:2.7,build
 USES+=		${_USES_PYTHON}

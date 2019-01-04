@@ -2,13 +2,14 @@
 
 PORTNAME=	elisa
 PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Audio player with QML and KDE Plasma integration
 
-LICENSE=	LGPLv3+
+LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake compiler:c++14-lang desktop-file-utils gettext kde:5 \

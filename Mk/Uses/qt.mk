@@ -30,7 +30,7 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		4 5
 QT4_VERSION?=		4.8.7
-QT5_VERSION?=		5.11.2
+QT5_VERSION?=		5.12.0
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -152,7 +152,7 @@ _USE_QT4_ONLY=		accessible assistant-adp assistantclient clucene codecs-cn codec
 
 _USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
-			graphicaleffects location paths phonon4 plugininfo printsupport \
+			graphicaleffects location networkauth paths phonon4 plugininfo printsupport \
 			qdbus qdoc qdoc-data qev quickcontrols \
 			quickcontrols2 scxml sensors serialbus serialport speech \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
@@ -288,6 +288,9 @@ multimedia_LIB=		libQt${_QT_LIBVER}Multimedia.so
 
 network_PORT=		net/${_QT_RELNAME}-network
 network_LIB=		libQt${_QT_LIBVER}Network.so
+
+networkauth_PORT=		net/${_QT_RELNAME}-networkauth
+networkauth_LIB=		libQt${_QT_LIBVER}NetworkAuth.so
 
 opengl_PORT=		graphics/${_QT_RELNAME}-opengl
 opengl_LIB=		libQt${_QT_LIBVER}OpenGL.so

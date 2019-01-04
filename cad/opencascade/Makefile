@@ -3,7 +3,7 @@
 
 PORTNAME=	opencascade
 PORTVERSION=	7.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad science
 MASTER_SITES=	LOCAL/thierry
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	bash:shells/bash
 
 # Check ${WRKSRC}/dox/overview/overview.md
 # and ${WRKSRC}/dox/dev_guides/building
-USES=		alias:10 cmake:outsource compiler:c++14-lang dos2unix \
+USES=		alias:10 cmake compiler:c++14-lang dos2unix \
 		gl shebangfix tk tar:tgz
 USE_XORG=	ice sm x11 xext xi xmu xt
 USE_GL=		gl glu

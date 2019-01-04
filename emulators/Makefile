@@ -43,8 +43,6 @@
     SUBDIR += fuse-utils
     SUBDIR += gbe
     SUBDIR += gem5
-    SUBDIR += generator
-    SUBDIR += generator-cbiere
     SUBDIR += gens
     SUBDIR += gngb
     SUBDIR += gngeo
@@ -111,13 +109,12 @@
     SUBDIR += ppsspp
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
-    SUBDIR += py-nova
     SUBDIR += py-unicorn
     SUBDIR += q4wine
     SUBDIR += qemu
     SUBDIR += qemu-cheri
     SUBDIR += qemu-devel
-    SUBDIR += qemu-ppcnv
+    SUBDIR += qemu-powernv
     SUBDIR += qemu-riscv
     SUBDIR += qemu-sbruno
     SUBDIR += qemu-user-static
