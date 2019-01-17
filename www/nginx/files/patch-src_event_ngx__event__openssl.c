@@ -1,4 +1,4 @@
---- src/event/ngx_event_openssl.c.orig	2017-10-17 13:16:38 UTC
+--- src/event/ngx_event_openssl.c.orig	2018-12-04 14:52:24 UTC
 +++ src/event/ngx_event_openssl.c
 @@ -9,6 +9,9 @@
  #include <ngx_core.h>
@@ -18,24 +18,24 @@
  static int ngx_ssl_verify_callback(int ok, X509_STORE_CTX *x509_store);
  static void ngx_ssl_info_callback(const ngx_ssl_conn_t *ssl_conn, int where,
      int ret);
-@@ -649,11 +653,14 @@ ngx_ssl_ciphers(ngx_conf_t *cf, ngx_ssl_
+@@ -665,11 +669,14 @@ ngx_ssl_ciphers(ngx_conf_t *cf, ngx_ssl_
  
  ngx_int_t
  ngx_ssl_client_certificate(ngx_conf_t *cf, ngx_ssl_t *ssl, ngx_str_t *cert,
 -    ngx_int_t depth)
-+    ngx_int_t depth, ngx_uint_t verify)
++    ngx_int_t depth, ngx_uint_t prodtrack)
  {
      STACK_OF(X509_NAME)  *list;
  
 -    SSL_CTX_set_verify(ssl->ctx, SSL_VERIFY_PEER, ngx_ssl_verify_callback);
-+    if (verify == 4)
++    if (prodtrack == 1)
 +        SSL_CTX_set_verify(ssl->ctx, SSL_VERIFY_PEER, ngx_ssl_verify_prodtrack_callback);
 +    else
 +        SSL_CTX_set_verify(ssl->ctx, SSL_VERIFY_PEER, ngx_ssl_verify_callback);
  
      SSL_CTX_set_verify_depth(ssl->ctx, depth);
  
-@@ -781,6 +788,122 @@ ngx_ssl_crl(ngx_conf_t *cf, ngx_ssl_t *s
+@@ -797,6 +804,122 @@ ngx_ssl_crl(ngx_conf_t *cf, ngx_ssl_t *s
  }
  
  
