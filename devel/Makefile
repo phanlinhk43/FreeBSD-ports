@@ -95,6 +95,7 @@
     SUBDIR += adacurses
     SUBDIR += adaid
     SUBDIR += aegis
+    SUBDIR += agar
     SUBDIR += ahven
     SUBDIR += aifad
     SUBDIR += ald
@@ -214,6 +215,7 @@
     SUBDIR += binutils
     SUBDIR += bison
     SUBDIR += blame
+    SUBDIR += bloaty
     SUBDIR += blitz
     SUBDIR += bmake
     SUBDIR += bmkdep
@@ -778,6 +780,7 @@
     SUBDIR += git-lite
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
+    SUBDIR += git-remote-hg
     SUBDIR += git-review
     SUBDIR += git-subversion
     SUBDIR += git-town
@@ -972,6 +975,7 @@
     SUBDIR += hs-basement
     SUBDIR += hs-basic-prelude
     SUBDIR += hs-bifunctors
+    SUBDIR += hs-bitarray
     SUBDIR += hs-bits-atomic
     SUBDIR += hs-blaze-builder
     SUBDIR += hs-blaze-textual
@@ -1267,8 +1271,10 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
+    SUBDIR += jetbrains-phpstorm
     SUBDIR += jfrog-cli
     SUBDIR += jiic
+    SUBDIR += jiri
     SUBDIR += jline
     SUBDIR += jna
     SUBDIR += jrtplib
@@ -1396,6 +1402,7 @@
     SUBDIR += libddoc
     SUBDIR += libdevq
     SUBDIR += libdfui
+    SUBDIR += libdill
     SUBDIR += libdisasm
     SUBDIR += libdisorder
     SUBDIR += libdispatch
@@ -1619,6 +1626,7 @@
     SUBDIR += libversion
     SUBDIR += libvhdi
     SUBDIR += libvirt
+    SUBDIR += libvirt-dbus
     SUBDIR += libvirt-glib
     SUBDIR += libvirt-java
     SUBDIR += libvmdk
@@ -2245,6 +2253,7 @@
     SUBDIR += p5-Data-ACL
     SUBDIR += p5-Data-Alias
     SUBDIR += p5-Data-Average
+    SUBDIR += p5-Data-Binary
     SUBDIR += p5-Data-Bind
     SUBDIR += p5-Data-Capture
     SUBDIR += p5-Data-ClearSilver-HDF
@@ -2989,6 +2998,7 @@
     SUBDIR += p5-MooX-ConfigFromFile
     SUBDIR += p5-MooX-File-ConfigDir
     SUBDIR += p5-MooX-HandlesVia
+    SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
@@ -3704,6 +3714,7 @@
     SUBDIR += p5-Time-Local
     SUBDIR += p5-Time-Mock
     SUBDIR += p5-Time-Moment
+    SUBDIR += p5-Time-Moment-Role-TimeZone
     SUBDIR += p5-Time-Object
     SUBDIR += p5-Time-Out
     SUBDIR += p5-Time-ParseDate
@@ -4273,6 +4284,7 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
+    SUBDIR += py-aenum
     SUBDIR += py-aioice
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiortc
@@ -4601,7 +4613,9 @@
     SUBDIR += py-isort
     SUBDIR += py-iterpipes
     SUBDIR += py-itypes
+    SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
+    SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
@@ -4623,6 +4637,7 @@
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
     SUBDIR += py-json_tricks
+    SUBDIR += py-jsonform
     SUBDIR += py-jsonlib
     SUBDIR += py-jsonlib2
     SUBDIR += py-jsonlines
@@ -4678,6 +4693,7 @@
     SUBDIR += py-logutils
     SUBDIR += py-louie
     SUBDIR += py-lxml
+    SUBDIR += py-macholib
     SUBDIR += py-magic
     SUBDIR += py-mailcap-fix
     SUBDIR += py-manuel
@@ -4696,7 +4712,6 @@
     SUBDIR += py-mock
     SUBDIR += py-molecule
     SUBDIR += py-mondrian
-    SUBDIR += py-mongoengine
     SUBDIR += py-mongokit
     SUBDIR += py-monotonic
     SUBDIR += py-monty
@@ -4748,6 +4763,7 @@
     SUBDIR += py-orbit
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
+    SUBDIR += py-orderedmultidict
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
     SUBDIR += py-os-service-types
@@ -5127,6 +5143,7 @@
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
     SUBDIR += py-typing
+    SUBDIR += py-typing-extensions
     SUBDIR += py-tzlocal
     SUBDIR += py-u-msgpack-python
     SUBDIR += py-ua_parser
@@ -5363,6 +5380,7 @@
     SUBDIR += qt5-qdoc
     SUBDIR += qt5-qdoc-data
     SUBDIR += qt5-qmake
+    SUBDIR += qt5-remoteobjects
     SUBDIR += qt5-script
     SUBDIR += qt5-scripttools
     SUBDIR += qt5-scxml
@@ -5390,6 +5408,7 @@
     SUBDIR += readline
     SUBDIR += rebar
     SUBDIR += rebar3
+    SUBDIR += redo
     SUBDIR += regexx
     SUBDIR += regexxer
     SUBDIR += relx
@@ -5408,6 +5427,7 @@
     SUBDIR += root-doc
     SUBDIR += rote
     SUBDIR += rpc2
+    SUBDIR += rpclib
     SUBDIR += rpm-spec-mode.el
     SUBDIR += rsvndump
     SUBDIR += rth
@@ -5511,6 +5531,7 @@
     SUBDIR += rubygem-clio
     SUBDIR += rubygem-cliprompt
     SUBDIR += rubygem-cloudfiles
+    SUBDIR += rubygem-cms_scanner
     SUBDIR += rubygem-cocaine
     SUBDIR += rubygem-coercible
     SUBDIR += rubygem-coffee-rails-rails5
@@ -5819,7 +5840,9 @@
     SUBDIR += rubygem-parser
     SUBDIR += rubygem-pastel
     SUBDIR += rubygem-patch_finder
+    SUBDIR += rubygem-pathspec
     SUBDIR += rubygem-pathutil
+    SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
     SUBDIR += rubygem-peek-rails50
     SUBDIR += rubygem-peek-gc-rails50

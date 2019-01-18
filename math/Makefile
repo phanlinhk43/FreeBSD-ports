@@ -130,6 +130,7 @@
     SUBDIR += armadillo
     SUBDIR += arpack++
     SUBDIR += arpack-ng
+    SUBDIR += ascent
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
@@ -270,6 +271,7 @@
     SUBDIR += hs-contravariant
     SUBDIR += hs-data-lens
     SUBDIR += hs-data-lens-template
+    SUBDIR += hs-dense-linear-algebra
     SUBDIR += hs-distributive
     SUBDIR += hs-erf
     SUBDIR += hs-fixed
@@ -684,11 +686,13 @@
     SUBDIR += py-apgl
     SUBDIR += py-basemap
     SUBDIR += py-basemap-data
+    SUBDIR += py-bayesian-optimization
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
     SUBDIR += py-chaospy
+    SUBDIR += py-cma
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
@@ -720,6 +724,7 @@
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-networkx
+    SUBDIR += py-networkx1
     SUBDIR += py-numarray
     SUBDIR += py-numeric
     SUBDIR += py-numexpr

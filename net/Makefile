@@ -610,6 +610,7 @@
     SUBDIR += p5-IO-Socket-Multicast
     SUBDIR += p5-IO-Socket-Multicast6
     SUBDIR += p5-IO-Socket-Socks
+    SUBDIR += p5-IO-Socket-Socks-Wrapper
     SUBDIR += p5-IO-Socket-Timeout
     SUBDIR += p5-IO-Socket-UNIX-Util
     SUBDIR += p5-IP-Anonymous
@@ -1388,8 +1389,6 @@
     SUBDIR += sshping
     SUBDIR += ssldump
     SUBDIR += sslh
-    SUBDIR += ssltunnel-client
-    SUBDIR += ssltunnel-server
     SUBDIR += ssmping
     SUBDIR += ssspl
     SUBDIR += ssvnc
