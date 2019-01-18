@@ -35,7 +35,7 @@
  
      SSL_CTX_set_verify_depth(ssl->ctx, depth);
  
-@@ -797,6 +804,122 @@ ngx_ssl_crl(ngx_conf_t *cf, ngx_ssl_t *s
+@@ -797,6 +804,126 @@ ngx_ssl_crl(ngx_conf_t *cf, ngx_ssl_t *s
  }
  
  
@@ -116,8 +116,10 @@
 +
 +    iname = X509_get_issuer_name(cert);
 +    sname = X509_get_subject_name(cert);
-+    if (iname == NULL || sname == NULL)
++    if (iname == NULL || sname == NULL) {
++	ok = 0;
 +        return 0;
++    }
 +
 +    issuer = X509_NAME_oneline(iname, NULL, 0);
 +    if (strcmp(issuer, NETGATE_CA_ISSUER) == 0) {
@@ -129,6 +131,7 @@
 +    if (strlen(subject) != 105) {
 +        OPENSSL_free(subject);
 +        OPENSSL_free(issuer);
++	ok = 0;
 +        return 0;
 +    }
 +    /* Check serial. */
@@ -137,6 +140,7 @@
 +    if (check_serial(serial) != 0) {
 +        OPENSSL_free(subject);
 +        OPENSSL_free(issuer);
++	ok = 0;
 +        return 0;
 +    }
 +    syslog(LOG_INFO, "%s: serial: %s subject: [%s] issuer: [%s]\n", __func__,
@@ -145,14 +149,14 @@
 +    OPENSSL_free(issuer);
 +
 +    err = prodtrack_get_status(serial, &status);
-+    syslog(LOG_INFO, "%s: err: %d status: %llu", __func__, err, status);
 +    if (err != 1)
-+        return 0;
++	ok = 0;
++    else if ((status & (PRODTRACK_DEVICE_TIMEOUT | PRODTRACK_DEVICE_SUSPENDED)) != 0)
++	ok = 0;
 +
-+    if ((status & (PRODTRACK_DEVICE_TIMEOUT | PRODTRACK_DEVICE_SUSPENDED)) != 0)
-+        return 0;
++    syslog(LOG_INFO, "%s: err: %d status: %llu verify: %d", __func__, err, status, ok);
 +
-+    return 1;
++    return (ok);
 +}
 +
  static int
