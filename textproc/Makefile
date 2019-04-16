@@ -61,7 +61,6 @@
     SUBDIR += bbe
     SUBDIR += be-aspell
     SUBDIR += bedic-data
-    SUBDIR += beediff
     SUBDIR += belr
     SUBDIR += bg-aspell
     SUBDIR += bg-hyphen
@@ -84,8 +83,8 @@
     SUBDIR += cdif
     SUBDIR += cdiff
     SUBDIR += cgrep
-    SUBDIR += chpp
     SUBDIR += chkascii
+    SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
     SUBDIR += cl-ppcre
@@ -117,6 +116,7 @@
     SUBDIR += da-aspell
     SUBDIR += da-hyphen
     SUBDIR += dadadodo
+    SUBDIR += datamash
     SUBDIR += db2latex
     SUBDIR += dbacl
     SUBDIR += dblatex
@@ -132,7 +132,6 @@
     SUBDIR += diffutils
     SUBDIR += dikt
     SUBDIR += discount
-    SUBDIR += dixit
     SUBDIR += doc-mode.el
     SUBDIR += docbook
     SUBDIR += docbook-sgml
@@ -167,7 +166,6 @@
     SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
     SUBDIR += elixir-earmark
-    SUBDIR += elixir-ex_doc
     SUBDIR += elixir-funnel
     SUBDIR += elixir-sweet_xml
     SUBDIR += emacs-wiki
@@ -225,8 +223,6 @@
     SUBDIR += gmetadom
     SUBDIR += gnome-doc-utils
     SUBDIR += gnugrep
-    SUBDIR += go.text
-    SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
     SUBDIR += gpp
@@ -234,6 +230,7 @@
     SUBDIR += grc-aspell
     SUBDIR += greple
     SUBDIR += groff
+    SUBDIR += gron
     SUBDIR += groonga
     SUBDIR += gsed
     SUBDIR += gspell
@@ -341,7 +338,6 @@
     SUBDIR += ibus-el
     SUBDIR += ibus-kmfl
     SUBDIR += ibus-m17n
-    SUBDIR += ibus-qt
     SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
     SUBDIR += ibus-uniemoji
@@ -417,6 +413,7 @@
     SUBDIR += libcss
     SUBDIR += libcsv
     SUBDIR += libcue
+    SUBDIR += libcyaml
     SUBDIR += libdiff
     SUBDIR += libe-book
     SUBDIR += libebml
@@ -435,6 +432,7 @@
     SUBDIR += liblrdf
     SUBDIR += libmrss
     SUBDIR += libmwaw03
+    SUBDIR += libnumbertext
     SUBDIR += libnxml
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
@@ -504,6 +502,7 @@
     SUBDIR += mi-aspell
     SUBDIR += mifluz
     SUBDIR += miller
+    SUBDIR += minify
     SUBDIR += minised
     SUBDIR += minixmlto
     SUBDIR += mk-aspell
@@ -530,6 +529,7 @@
     SUBDIR += nn-aspell
     SUBDIR += no-hunspell
     SUBDIR += nunnimcax
+    SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
     SUBDIR += ocaml-csv
@@ -559,6 +559,7 @@
     SUBDIR += p5-CSS-Minifier-XS
     SUBDIR += p5-CSS-Packer
     SUBDIR += p5-CSS-SAC
+    SUBDIR += p5-CSS-Sass
     SUBDIR += p5-CSS-Simple
     SUBDIR += p5-CSS-Squish
     SUBDIR += p5-CSS-Tiny
@@ -1245,6 +1246,7 @@
     SUBDIR += php73-xmlreader
     SUBDIR += php73-xmlwriter
     SUBDIR += php73-xsl
+    SUBDIR += pict
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1255,11 +1257,13 @@
     SUBDIR += ppower4
     SUBDIR += print-n-times
     SUBDIR += pugixml
+    SUBDIR += pup
     SUBDIR += pure-csv
     SUBDIR += pure-xml
     SUBDIR += py-Chameleon
     SUBDIR += py-CommonMark
     SUBDIR += py-MarkupSafe
+    SUBDIR += py-QDarkStyle
     SUBDIR += py-Tempita
     SUBDIR += py-acora
     SUBDIR += py-agate
@@ -1267,11 +1271,13 @@
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
     SUBDIR += py-asciinema
+    SUBDIR += py-asonic
     SUBDIR += py-asv
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
     SUBDIR += py-bibtexparser
     SUBDIR += py-bugzillatools
+    SUBDIR += py-cchardet
     SUBDIR += py-chardet
     SUBDIR += py-citeproc-py
     SUBDIR += py-citeproc-py-styles
@@ -1316,8 +1322,10 @@
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
     SUBDIR += py-jaxml
+    SUBDIR += py-jsonslicer
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
+    SUBDIR += py-langdetect
     SUBDIR += py-laserhammer
     SUBDIR += py-libtre
     SUBDIR += py-libxml2
@@ -1338,6 +1346,7 @@
     SUBDIR += py-normality
     SUBDIR += py-numpydoc
     SUBDIR += py-openpyxl
+    SUBDIR += py-openpyxl24
     SUBDIR += py-openstackdocstheme
     SUBDIR += py-orange3-text
     SUBDIR += py-os-api-ref
@@ -1352,6 +1361,8 @@
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
+    SUBDIR += py-pdftotext
+    SUBDIR += py-precis_i18n
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
     SUBDIR += py-pyahocorasick
@@ -1363,6 +1374,8 @@
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
+    SUBDIR += py-pyjade
+    SUBDIR += py-pykwalify
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
@@ -1380,8 +1393,6 @@
     SUBDIR += py-pytidylib
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
-    SUBDIR += py-qt4-xml
-    SUBDIR += py-qt4-xmlpatterns
     SUBDIR += py-qt5-xml
     SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
@@ -1403,13 +1414,17 @@
     SUBDIR += py-sphinx-hieroglyph
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx_numfig
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
+    SUBDIR += py-sphinxcontrib-applehelp
     SUBDIR += py-sphinxcontrib-bitbucket
+    SUBDIR += py-sphinxcontrib-devhelp
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
+    SUBDIR += py-sphinxcontrib-jsmath
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-websupport
@@ -1454,10 +1469,6 @@
     SUBDIR += qprint
     SUBDIR += qrcodegen
     SUBDIR += qstardict
-    SUBDIR += qt4-clucene
-    SUBDIR += qt4-xml
-    SUBDIR += qt4-xmlpatterns
-    SUBDIR += qt4-xmlpatterns-tool
     SUBDIR += qt5-xml
     SUBDIR += qt5-xmlpatterns
     SUBDIR += qu-aspell
@@ -1470,6 +1481,7 @@
     SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re_graph
+    SUBDIR += re-flex
     SUBDIR += redet
     SUBDIR += redland
     SUBDIR += redland-bindings
@@ -1515,6 +1527,7 @@
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
+    SUBDIR += rubygem-character_set
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-chewy
     SUBDIR += rubygem-citrus
@@ -1537,6 +1550,9 @@
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
     SUBDIR += rubygem-elasticsearch-dsl
+    SUBDIR += rubygem-elasticsearch-model
+    SUBDIR += rubygem-elasticsearch-persistence
+    SUBDIR += rubygem-elasticsearch-rails
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-elasticsearch-xpack
     SUBDIR += rubygem-emot
@@ -1589,6 +1605,7 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
+    SUBDIR += rubygem-nokogiri18
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1609,6 +1626,7 @@
     SUBDIR += rubygem-rdtool
     SUBDIR += rubygem-redcarpet
     SUBDIR += rubygem-regexp_parser
+    SUBDIR += rubygem-regexp_property_values
     SUBDIR += rubygem-representable
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-ri_cal
@@ -1653,7 +1671,6 @@
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter
-    SUBDIR += rubygem-version_sorter21
     SUBDIR += rubygem-whatlanguage
     SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-wikicloth081
@@ -1673,22 +1690,21 @@
     SUBDIR += saxon
     SUBDIR += saxon-devel
     SUBDIR += saxon-he
-    SUBDIR += scancode-toolkit
     SUBDIR += sc-aspell
+    SUBDIR += scancode-toolkit
     SUBDIR += scdoc
     SUBDIR += scew
     SUBDIR += scim
     SUBDIR += scim-bridge
-    SUBDIR += scim-bridge-qt4
     SUBDIR += scim-input-pad
     SUBDIR += scim-kmfl-imengine
     SUBDIR += scim-m17n
     SUBDIR += scim-openvanilla
     SUBDIR += scim-table-imengine
     SUBDIR += scr2txt
-    SUBDIR += scrollkeeper
     SUBDIR += scss
     SUBDIR += scws
+    SUBDIR += sd
     SUBDIR += sdcv
     SUBDIR += sdf
     SUBDIR += sdif
@@ -1714,8 +1730,8 @@
     SUBDIR += smi
     SUBDIR += smu
     SUBDIR += so-hunspell
+    SUBDIR += sonic
     SUBDIR += soothsayer
-    SUBDIR += soprano
     SUBDIR += source-highlight
     SUBDIR += sowing
     SUBDIR += spellutils
@@ -1788,7 +1804,6 @@
     SUBDIR += uim-gtk
     SUBDIR += uim-gtk3
     SUBDIR += uim-m17nlib
-    SUBDIR += uim-qt4
     SUBDIR += uim-qt5
     SUBDIR += uml2svg
     SUBDIR += uncle
@@ -1797,6 +1812,7 @@
     SUBDIR += unoconv
     SUBDIR += unroff
     SUBDIR += unrtf
+    SUBDIR += up
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
@@ -1862,8 +1878,6 @@
     SUBDIR += xsv
     SUBDIR += xsv-rs
     SUBDIR += xwindiff
-    SUBDIR += xxdiff
-    SUBDIR += xxdiff-scripts
     SUBDIR += y2l
     SUBDIR += yali
     SUBDIR += yamcha
@@ -1876,6 +1890,7 @@
     SUBDIR += yould
     SUBDIR += zenxml
     SUBDIR += zorba
+    SUBDIR += zsh-autosuggestions
     SUBDIR += zsh-syntax-highlighting
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell

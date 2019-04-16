@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	verilator
-PORTVERSION=	3.924
+PORTVERSION=	4.008
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	https://www.veripool.org/ftp/
 
@@ -11,9 +12,7 @@ COMMENT=	Synthesizable Verilog to C++ compiler
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	flex:textproc/flex
-
-USES=		bison gmake pathfix perl5 tar:tgz
+USES=		bison compiler:c++11-lang gmake pathfix perl5 tar:tgz
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"

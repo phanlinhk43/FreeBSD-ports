@@ -2,6 +2,7 @@
 
 PORTNAME=	partio
 PORTVERSION=	1.5.5
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics math
 
@@ -12,7 +13,7 @@ LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	swig3.0:devel/swig30
 
-USES=		cmake gl python shebangfix
+USES=		cmake compiler:c++11-lang gl python shebangfix
 SHEBANG_FILES=	src/tools/partedit.py src/tools/partjson.py
 USE_GL=		gl glu glut
 USE_LDCONFIG=	yes

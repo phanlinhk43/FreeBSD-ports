@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	SCIP
-DISTVERSION=	6.0.0
+DISTVERSION=	6.0.1
 PORTREVISION=	1
 CATEGORIES=	math science
 MASTER_SITES=	http://scip.zib.de/download/release/

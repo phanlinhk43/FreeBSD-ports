@@ -30,6 +30,7 @@
     SUBDIR += hs-criterion
     SUBDIR += hs-criterion-measurement
     SUBDIR += httperf
+    SUBDIR += hyperfine
     SUBDIR += imb
     SUBDIR += interbench
     SUBDIR += iorate
@@ -65,6 +66,7 @@
     SUBDIR += polygraph
     SUBDIR += postal
     SUBDIR += postmark
+    SUBDIR += py-locust
     SUBDIR += py-naarad
     SUBDIR += py-throughpy
     SUBDIR += py-zopkio

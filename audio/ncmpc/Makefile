@@ -3,7 +3,7 @@
 
 PORTNAME=	ncmpc
 PORTVERSION=	0.33
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.musicpd.org/download/ncmpc/0/
 
@@ -41,8 +41,7 @@ MANPAGES_MESON_TRUE=	manual
 MANPAGES_USES=		python:build
 
 NLS_LDFLAGS=		-lintl
-NLS_MESON_OFF=		-Dnls=disabled
-NLS_MESON_ON=		-Dnls=enabled
+NLS_MESON_ENABLED=	nls
 NLS_USES=		gettext
 
 .include <bsd.port.mk>

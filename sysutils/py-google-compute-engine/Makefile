@@ -1,11 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	google-compute-engine
-DISTVERSION=	2.8.6
+DISTVERSION=	2.8.13
+PORTREVISION=	2
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	helen.koike@collabora.com
+MAINTAINER=	lucas.kanashiro@collabora.com
 COMMENT=	Guest Environment for Google Compute Engine
 
 LICENSE=	APACHE20
@@ -21,12 +22,12 @@ USES=		python shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
-SHEBANG_FILES=	scripts/set_multiqueue scripts/optimize_local_ssd
+SHEBANG_FILES=	scripts/google_set_multiqueue scripts/google_optimize_local_ssd
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GoogleCloudPlatform
 GH_PROJECT=	compute-image-packages
-GH_TAGNAME=	20181011
+GH_TAGNAME=	20190124
 
 USE_RC_SUBR=	google_instance_setup \
 		google_accounts_daemon \

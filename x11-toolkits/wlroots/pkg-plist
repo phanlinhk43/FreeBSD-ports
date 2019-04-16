@@ -4,6 +4,7 @@ include/wlr/backend/headless.h
 include/wlr/backend/interface.h
 include/wlr/backend/libinput.h
 include/wlr/backend/multi.h
+include/wlr/backend/noop.h
 include/wlr/backend/session.h
 include/wlr/backend/session/interface.h
 include/wlr/backend/wayland.h
@@ -31,6 +32,7 @@ include/wlr/types/wlr_data_control_v1.h
 include/wlr/types/wlr_data_device.h
 include/wlr/types/wlr_export_dmabuf_v1.h
 include/wlr/types/wlr_foreign_toplevel_management_v1.h
+include/wlr/types/wlr_fullscreen_shell_v1.h
 include/wlr/types/wlr_gamma_control.h
 include/wlr/types/wlr_gamma_control_v1.h
 include/wlr/types/wlr_gtk_primary_selection.h
@@ -49,8 +51,10 @@ include/wlr/types/wlr_output_damage.h
 include/wlr/types/wlr_output_layout.h
 include/wlr/types/wlr_pointer.h
 include/wlr/types/wlr_pointer_constraints_v1.h
+include/wlr/types/wlr_pointer_gestures_v1.h
 include/wlr/types/wlr_presentation_time.h
 include/wlr/types/wlr_primary_selection.h
+include/wlr/types/wlr_primary_selection_v1.h
 include/wlr/types/wlr_region.h
 include/wlr/types/wlr_relative_pointer_v1.h
 include/wlr/types/wlr_screencopy_v1.h
@@ -78,6 +82,6 @@ include/wlr/version.h
 include/wlr/xcursor.h
 %%X11%%include/wlr/xwayland.h
 lib/libwlroots.so
-lib/libwlroots.so.0
-lib/libwlroots.so.0.0.0
+lib/libwlroots.so.2
+lib/libwlroots.so.2.3.1
 libdata/pkgconfig/wlroots.pc

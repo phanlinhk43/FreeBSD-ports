@@ -1,6 +1,6 @@
---- chrome/browser/extensions/bookmark_app_helper.cc.orig	2018-11-19 19:55:03.000000000 +0100
-+++ chrome/browser/extensions/bookmark_app_helper.cc	2018-12-04 14:45:16.963992000 +0100
-@@ -597,7 +597,7 @@
+--- chrome/browser/extensions/bookmark_app_helper.cc.orig	2019-03-11 22:00:53 UTC
++++ chrome/browser/extensions/bookmark_app_helper.cc
+@@ -503,7 +503,7 @@ void BookmarkAppHelper::FinishInstallation(const Exten
    if (create_shortcuts_) {
  #if !defined(OS_CHROMEOS)
      web_app::ShortcutLocations creation_locations;

@@ -14,9 +14,9 @@ BUILD_DEPENDS=	go>=1.9.4:lang/go
 USES=		compiler
 
 USE_GITHUB=	yes
-GH_TAGNAME=	RELEASE.2019-01-16T21-44-08Z
+GH_TAGNAME=	RELEASE.2019-03-27T22-35-21Z
 GH_SUBDIR=	src/github.com/${PORTNAME}/${PORTNAME}
-COMMIT_ID=	8766c5eb22c1dc59721ad8a2c4c6fcf37bb2aad2
+COMMIT_ID=	6df05e489dc789cf26e82810cf5cfeefb1d90761
 
 PLIST_FILES=	bin/minio
 
@@ -27,9 +27,6 @@ GROUPS=		minio
 
 SUB_LIST=	USER="${USERS}" \
 		GROUP="${GROUPS}"
-
-post-patch:
-	@${CP} ${WRKSRC}/pkg/cpu/counter_linux.go ${WRKSRC}/pkg/cpu/counter_freebsd.go
 
 do-build:
 	@cd ${WRKSRC}/${GH_SUBDIR} ; \
