@@ -3,7 +3,7 @@
 
 PORTNAME=	libtorrent-rasterbar
 DISTVERSION=	1.1.10
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	https://github.com/arvidn/libtorrent/releases/download/libtorrent-${PORTVERSION:S/./_/g}/
 
@@ -12,8 +12,6 @@ COMMENT=	C++ library implementing a BitTorrent client
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN=		fails to build with boost 1.70, see bug 236588
 
 LIB_DEPENDS=	libboost_chrono.so:devel/boost-libs \
 		libboost_random.so:devel/boost-libs \

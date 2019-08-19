@@ -3,7 +3,7 @@
 
 PORTNAME=	hypre
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.15.1
+DISTVERSION=	2.16.0
 PORTREVISION=	1
 CATEGORIES=	science
 
@@ -17,7 +17,7 @@ BROKEN_powerpc64=	fails to compile: ./DistributedMatrixPilutSolver.h:97:20: expe
 
 USES=		blaslapack fortran gmake localbase # gmake is only for the 'test' target
 USE_GITHUB=	yes
-GH_ACCOUNT=	LLNL
+GH_ACCOUNT=	hypre-space
 USE_LDCONFIG=	yes
 
 WRKSRC_SUBDIR=	src
@@ -52,6 +52,8 @@ SHL3=	${PORTVERSION}
 SHL2=	${SHL3:R}
 SHL1=	${SHL2:R}
 
+PORTDOCS=	*
+
 post-patch:
 # Avoid conflict with C++20 <version> by ignoring <...> under WRKSRC
 	@${REINPLACE_CMD} -i .c++20 '/utilities/s/-I/-iquote/' \
@@ -68,7 +70,6 @@ do-install:
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/../docs/*.pdf \
-		${STAGEDIR}${DOCSDIR}
+	${COPYTREE_SHARE} ${WRKSRC}/docs/usr-manual ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

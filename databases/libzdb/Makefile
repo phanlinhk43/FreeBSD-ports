@@ -3,6 +3,7 @@
 
 PORTNAME=	libzdb
 PORTVERSION=	3.2
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.tildeslash.com/libzdb/dist/
 
@@ -12,7 +13,9 @@ COMMENT=	Thread-safe connection pool library
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake libtool localbase pathfix
+BROKEN_i386=	fails to build
+
+USES=		compiler:c11 gmake libtool localbase pathfix
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
@@ -29,7 +32,16 @@ PGSQL_CONFIGURE_WITH=	postgresql=${LOCALBASE}/bin/pg_config
 PGSQL_USES=		pgsql
 SQLITE_CONFIGURE_WITH=	sqlite=${LOCALBASE}
 SQLITE_USES=		sqlite
-SSL_CONFIGURE_ENABLE=	openssl=${OPENSSLBASE}
 SSL_USES=		ssl
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MSSL}
+.if ${SSL_DEFAULT} == base
+CONFIGURE_ARGS+=	--enable-openssl
+.else
+CONFIGURE_ARGS+=	--enable-openssl=${OPENSSLBASE}
+.endif
+.endif
 
 .include <bsd.port.mk>

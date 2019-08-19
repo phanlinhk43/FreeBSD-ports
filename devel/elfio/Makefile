@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	elfio
-PORTVERSION=	3.3
+PORTVERSION=	3.4
+PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	SF/elfio/ELFIO-sources/ELFIO-${PORTVERSION}
 
@@ -11,6 +12,8 @@ COMMENT=	Small C++ library for reading and generating ELF files
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+USES=		compiler:c++11-lang
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--bindir=${EXAMPLESDIR}

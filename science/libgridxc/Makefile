@@ -2,6 +2,7 @@
 
 PORTNAME=	libgridxc
 DISTVERSION=	0.8.5
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/trunk/${DISTVERSION:R}/+download/
 

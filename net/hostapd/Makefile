@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	hostapd
-PORTVERSION=	2.7
-PORTREVISION=	1
+PORTVERSION=	2.8
 CATEGORIES=	net
 MASTER_SITES=	https://w1.fi/releases/
 
@@ -22,6 +21,9 @@ LDFLAGS+=	-L${OPENSSLLIB}
 
 PLIST_FILES=	sbin/hostapd sbin/hostapd_cli man/man1/hostapd_cli.1.gz \
 		man/man8/hostapd.8.gz
+.if !exists(/etc/rc.d/hostapd)
+USE_RC_SUBR=	hostapd
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@$$(E) "  CC " $$<|@$$(E) "  $$(CC) " $$<|' \

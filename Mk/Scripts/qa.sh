@@ -363,7 +363,6 @@ proxydeps_suggest_uses() {
 		${pkg} = "graphics/cairo" -o \
 		${pkg} = "graphics/cairomm" -o \
 		${pkg} = "devel/dconf" -o \
-		${pkg} = "audio/esound" -o \
 		${pkg} = "devel/gconf2" -o \
 		${pkg} = "devel/gconfmm26" -o \
 		${pkg} = "devel/glib20" -o \
@@ -975,6 +974,9 @@ depends_blacklist()
 			lang/gcc)
 				instead="USE_GCC"
 				;;
+			lang/julia)
+				instead="a dependency on lang/julia\${JULIA_DEFAULT:S/.//}"
+				;;
 			devel/llvm)
 				instead="a dependency on devel/llvm\${LLVM_DEFAULT}"
 				;;
@@ -992,10 +994,24 @@ depends_blacklist()
 	return $rc
 }
 
+pkgmessage()
+{
+	for message in ${PKGMESSAGES}; do
+		if [ -f "${message}" ]; then
+			if ! head -1 "${message}" | grep -q '^\['; then
+				warn "${message} not in UCL format, will be shown on initial install only."
+				warn "See https://www.freebsd.org/doc/en/books/porters-handbook/pkg-files.html#porting-message"
+			fi
+		fi
+	done
+
+	return 0
+}
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
-checks="$checks license depends_blacklist"
+checks="$checks license depends_blacklist pkgmessage"
 
 ret=0
 cd ${STAGEDIR} || exit 1

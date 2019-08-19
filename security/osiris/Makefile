@@ -10,6 +10,10 @@ MASTER_SITES=	http://osiris.shmoo.com/data/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shmoo client/server host integrity checker
 
+BROKEN=		unfetchable
+BROKEN_FreeBSD_12=	undefined symbol: SHA_Init
+BROKEN_FreeBSD_13=	undefined symbol: SHA_Init
+
 GNU_CONFIGURE=	yes
 USES=		readline ssl
 

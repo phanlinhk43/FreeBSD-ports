@@ -2,7 +2,6 @@
 
 PORTNAME=	ktp-contact-list
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -17,7 +16,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		dbusaddons ecm i18n iconthemes jobwidgets kcmutils kio \
 		notifications notifyconfig people service wallet widgetsaddons \
 		windowsystem xmlgui
-USE_QT=		core dbus gui network widgets xml \
+USE_QT=		concurrent core dbus gui network widgets xml \
 		buildtools_build qmake_build
 
 OPTIONS_DEFINE=	DOCS

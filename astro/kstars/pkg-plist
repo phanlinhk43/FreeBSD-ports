@@ -119,6 +119,7 @@ share/doc/HTML/ca/kstars/profile_wizard_welcome.png
 share/doc/HTML/ca/kstars/quicktour.docbook
 share/doc/HTML/ca/kstars/retrograde.docbook
 share/doc/HTML/ca/kstars/satellites_tab.png
+share/doc/HTML/ca/kstars/screen1.png
 share/doc/HTML/ca/kstars/scriptbuilder.docbook
 share/doc/HTML/ca/kstars/security-high.png
 share/doc/HTML/ca/kstars/security-low.png
@@ -463,7 +464,6 @@ share/doc/HTML/en/kstars/viewops.png
 share/doc/HTML/en/kstars/wut.docbook
 share/doc/HTML/en/kstars/wut.png
 share/doc/HTML/en/kstars/zenith.docbook
-share/doc/HTML/es/kstars/aavso.png
 share/doc/HTML/es/kstars/ai-contents.docbook
 share/doc/HTML/es/kstars/altvstime.docbook
 share/doc/HTML/es/kstars/altvstime.png

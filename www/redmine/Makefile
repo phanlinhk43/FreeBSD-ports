@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redmine
-PORTVERSION=	3.4.9
-PORTREVISION=	1
+PORTVERSION=	3.4.11
 CATEGORIES=	www
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -14,7 +13,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
 RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
-		rubygem-rails4>=4.2.11:www/rubygem-rails4 \
+		rubygem-rails4>=4.2.11.1:www/rubygem-rails4 \
 		rubygem-jquery-rails>=3.1.4:www/rubygem-jquery-rails \
 		rubygem-coderay>=1.1.1:textproc/rubygem-coderay \
 		rubygem-request_store>=1.0.5:devel/rubygem-request_store \
@@ -34,10 +33,11 @@ RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
 		rubygem-rack-openid>=0:www/rubygem-rack-openid \
 		rubygem-rake>=0:devel/rubygem-rake
 
+USES=		cpe
+USE_RUBY=	yes
+
 NO_ARCH=	yes
 NO_BUILD=	yes
-USE_RUBY=	yes
-USES=		cpe
 
 USERS=		${WWWOWN}
 GROUPS=		${WWWGRP}

@@ -216,10 +216,14 @@
 %%DATADIR%%/library/MCU_NXP_S08.lib
 %%DATADIR%%/library/MCU_Parallax.dcm
 %%DATADIR%%/library/MCU_Parallax.lib
+%%DATADIR%%/library/MCU_Renesas_Synergy_S1.dcm
+%%DATADIR%%/library/MCU_Renesas_Synergy_S1.lib
 %%DATADIR%%/library/MCU_SiFive.dcm
 %%DATADIR%%/library/MCU_SiFive.lib
 %%DATADIR%%/library/MCU_SiliconLabs.dcm
 %%DATADIR%%/library/MCU_SiliconLabs.lib
+%%DATADIR%%/library/MCU_STC.dcm
+%%DATADIR%%/library/MCU_STC.lib
 %%DATADIR%%/library/MCU_ST_STM32F0.dcm
 %%DATADIR%%/library/MCU_ST_STM32F0.lib
 %%DATADIR%%/library/MCU_ST_STM32F1.dcm

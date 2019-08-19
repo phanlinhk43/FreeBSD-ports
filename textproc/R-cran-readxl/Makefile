@@ -2,6 +2,7 @@
 
 PORTNAME=	readxl
 DISTVERSION=	1.3.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -9,6 +10,8 @@ MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Read Excel Files
 
 LICENSE=	GPLv3
+
+BROKEN=		dependency 'progress' is not available for package 'readxl'
 
 BUILD_DEPENDS=	R-cran-knitr>0:print/R-cran-knitr
 RUN_DEPENDS=	R-cran-Rcpp>=0.12.18:devel/R-cran-Rcpp \

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.21.7
+PORTVERSION=	0.21.13
 PORTREVISION=	1
 CATEGORIES=	audio ipv6
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
@@ -27,6 +27,7 @@ MESON_ARGS=	-Dauto_features=disabled \
 		-Dicu=enabled \
 		-Doss=enabled \
 		-Dpipe=true \
+		-Dsyslog=enabled \
 		-Dzlib=enabled
 CFLAGS+=	-I${PREFIX}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -70,7 +71,7 @@ PLAYLISTS_DESC=	Enable extra playlist support (wma, RSS)
 QOBUZ_DESC=	Streaming service support: Qobuz
 SIDPLAY2_DESC=	Sidplay support (C64 mono and stereo files)
 SOUNDCLOUD_DESC=Streaming service support: SoundCloud
-TIDAL_DESC=	Streaming service support: TIDAL
+TIDAL_DESC=	Streaming service support: TIDAL (currently defunct)
 TWOLAME_DESC=	TwoLAME support (mp2)
 VORBISENC_DESC=	Ogg Vorbis encoder
 WILDMIDI_DESC=	WildMIDI support (MIDI files)

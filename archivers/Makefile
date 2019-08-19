@@ -42,10 +42,6 @@
     SUBDIR += hffzip
     SUBDIR += hlextract
     SUBDIR += hpack.non-usa.only
-    SUBDIR += hs-tar
-    SUBDIR += hs-zip-archive
-    SUBDIR += hs-zlib
-    SUBDIR += hs-zlib-bindings
     SUBDIR += innoextract
     SUBDIR += javatar
     SUBDIR += jzlib
@@ -74,11 +70,13 @@
     SUBDIR += libunrar
     SUBDIR += libunrar5
     SUBDIR += libzip
+    SUBDIR += lizard
     SUBDIR += lrzip
     SUBDIR += lua-lzlib
     SUBDIR += lua51-zlib
     SUBDIR += lzfse
     SUBDIR += lzip
+    SUBDIR += lziprecover
     SUBDIR += lzlib
     SUBDIR += lzma
     SUBDIR += lzmalib
@@ -91,7 +89,6 @@
     SUBDIR += mscompress
     SUBDIR += mtf
     SUBDIR += nomarch
-    SUBDIR += nulib
     SUBDIR += nwreckdum
     SUBDIR += ocaml-bz2
     SUBDIR += ocaml-zip
@@ -176,6 +173,7 @@
     SUBDIR += py-backports.lzma
     SUBDIR += py-borgbackup
     SUBDIR += py-brotli
+    SUBDIR += py-brotlipy
     SUBDIR += py-bup
     SUBDIR += py-bz2file
     SUBDIR += py-czipfile
@@ -192,6 +190,7 @@
     SUBDIR += py-rjsmin
     SUBDIR += py-warctools
     SUBDIR += py-xopen
+    SUBDIR += py-zopfli
     SUBDIR += py-zstandard
     SUBDIR += py-zstd
     SUBDIR += qpress

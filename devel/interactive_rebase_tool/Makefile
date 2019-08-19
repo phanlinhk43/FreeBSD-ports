@@ -2,12 +2,15 @@
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	1.0.0
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Improved sequence editor for Git
 
 LICENSE=	ISCL
+
+LIB_DEPENDS=	libgit2.so:devel/libgit2
 
 USES=		cargo ncurses
 USE_GITHUB=	yes

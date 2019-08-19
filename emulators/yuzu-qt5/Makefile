@@ -1,0 +1,10 @@
+# $FreeBSD$
+
+PORTREVISION=	1
+PKGNAMESUFFIX=	-qt5
+
+MASTERDIR=	${.CURDIR}/../yuzu
+
+OPTIONS_SLAVE=	QT5
+
+.include "${MASTERDIR}/Makefile"

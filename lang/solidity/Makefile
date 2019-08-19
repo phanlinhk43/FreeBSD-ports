@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	solidity
-PORTVERSION=	0.5.7
-PORTREVISION=	1
+PORTVERSION=	0.5.10
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/ethereum/solidity/releases/download/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
