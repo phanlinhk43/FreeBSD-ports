@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	gobuffalo
-PORTVERSION=	0.14.8
+PORTVERSION=	0.14.10
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
-MAINTAINER=	dg@syrec.org
+MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Go web development eco-system, designed to make the life easier
 
 LICENSE=	MIT

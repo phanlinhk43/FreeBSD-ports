@@ -348,6 +348,7 @@
     SUBDIR += py-openlp
     SUBDIR += py-periscope
     SUBDIR += py-pretty_midi
+    SUBDIR += py-pymediainfo
     SUBDIR += py-qt5-multimedia
     SUBDIR += py-qt5-multimediawidgets
     SUBDIR += py-soco
@@ -403,6 +404,7 @@
     SUBDIR += szap-s2
     SUBDIR += tautulli
     SUBDIR += tcmplex-panteltje
+    SUBDIR += termplay
     SUBDIR += tivodecode
     SUBDIR += totem
     SUBDIR += totem-pl-parser

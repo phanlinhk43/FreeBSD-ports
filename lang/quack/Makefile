@@ -3,7 +3,7 @@
 
 PORTNAME=	quack
 PORTVERSION=	0.47
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	lang scheme elisp
 MASTER_SITES=	http://www.neilvandyke.org/quack/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -17,6 +17,8 @@ COMMENT=	Enhanced support for editing and running Scheme code
 LICENSE=	GPLv2
 
 BROKEN=		unfetchable
+DEPRECATED=	Unfetchable, unmaintained
+EXPIRATION_DATE=	2019-10-16
 
 RUN_DEPENDS=	wget:ftp/wget
 
