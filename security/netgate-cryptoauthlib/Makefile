@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	netgate-cryptoauthlib
-PORTVERSION=	20180710
+PORTVERSION=	20190927
 CATEGORIES=	security
 
 MAINTAINER=	garga@FreeBSD.org
