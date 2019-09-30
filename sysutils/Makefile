@@ -881,6 +881,7 @@
     SUBDIR += pefs-kmod
     SUBDIR += personality
     SUBDIR += pesign
+    SUBDIR += pfetch
     SUBDIR += pflogx
     SUBDIR += pfstat
     SUBDIR += pftables
@@ -898,6 +899,7 @@
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
+    SUBDIR += pies
     SUBDIR += pipemeter
     SUBDIR += plasma-pass
     SUBDIR += plasma5-discover

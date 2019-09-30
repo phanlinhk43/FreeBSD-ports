@@ -50,6 +50,7 @@
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-later
+    SUBDIR += R-cran-lifecycle
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
@@ -977,6 +978,7 @@
     SUBDIR += hs-random
     SUBDIR += hs-setlocale
     SUBDIR += hs-shake
+    SUBDIR += hs-spago
     SUBDIR += hs-threadscope
     SUBDIR += hs-transformers-compat
     SUBDIR += hs-unordered-containers
@@ -1983,6 +1985,7 @@
     SUBDIR += p5-Commands-Guarded
     SUBDIR += p5-CommitBit
     SUBDIR += p5-Compiler-Lexer
+    SUBDIR += p5-Config-AST
     SUBDIR += p5-Config-Any
     SUBDIR += p5-Config-ApacheFormat
     SUBDIR += p5-Config-Auto
@@ -2008,6 +2011,8 @@
     SUBDIR += p5-Config-MySQL
     SUBDIR += p5-Config-Objective
     SUBDIR += p5-Config-Options
+    SUBDIR += p5-Config-Parser
+    SUBDIR += p5-Config-Parser-ldap
     SUBDIR += p5-Config-Perl-V
     SUBDIR += p5-Config-Properties
     SUBDIR += p5-Config-Record
@@ -3888,6 +3893,7 @@
     SUBDIR += pecl-request
     SUBDIR += pecl-swoole
     SUBDIR += pecl-sync
+    SUBDIR += pecl-uploadprogress
     SUBDIR += pecl-uuid
     SUBDIR += pecl-uv
     SUBDIR += pecl-vld
@@ -4390,6 +4396,7 @@
     SUBDIR += py-dis3
     SUBDIR += py-distlib
     SUBDIR += py-distorm
+    SUBDIR += py-dj22-django-rq
     SUBDIR += py-django-rq
     SUBDIR += py-django-rq-dashboard
     SUBDIR += py-django-tastypie-mongoengine
@@ -4788,7 +4795,6 @@
     SUBDIR += py-pip
     SUBDIR += py-pip-api
     SUBDIR += py-pip-tools
-    SUBDIR += py-pip-tools3
     SUBDIR += py-pipdeptree
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
@@ -4869,7 +4875,7 @@
     SUBDIR += py-pyinstaller
     SUBDIR += py-pyjsparser
     SUBDIR += py-pyke
-    SUBDIR += py-pylama 
+    SUBDIR += py-pylama
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
@@ -5027,6 +5033,7 @@
     SUBDIR += py-selectors2
     SUBDIR += py-selectors34
     SUBDIR += py-semantic_version
+    SUBDIR += py-semantic_version26
     SUBDIR += py-semver
     SUBDIR += py-serializable
     SUBDIR += py-serpent
@@ -5119,6 +5126,7 @@
     SUBDIR += py-traitlets
     SUBDIR += py-traits
     SUBDIR += py-transaction
+    SUBDIR += py-transitions
     SUBDIR += py-tree-format
     SUBDIR += py-trollius
     SUBDIR += py-ttystatus
@@ -5200,6 +5208,7 @@
     SUBDIR += py-xxhash
     SUBDIR += py-yaml
     SUBDIR += py-yamllint
+    SUBDIR += py-yamlordereddictloader
     SUBDIR += py-yandex-money-sdk
     SUBDIR += py-yappi
     SUBDIR += py-yapps2
@@ -5704,6 +5713,7 @@
     SUBDIR += rubygem-chef-provisioning
     SUBDIR += rubygem-cheffish
     SUBDIR += rubygem-childprocess
+    SUBDIR += rubygem-childprocess2
     SUBDIR += rubygem-chronic
     SUBDIR += rubygem-chronic_duration
     SUBDIR += rubygem-clamp
@@ -5882,7 +5892,6 @@
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape11
     SUBDIR += rubygem-grape_logging
-    SUBDIR += rubygem-grape_logging181
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphql
     SUBDIR += rubygem-graphql-docs
@@ -6218,7 +6227,7 @@
     SUBDIR += rubygem-sprockets
     SUBDIR += rubygem-sprockets-es6
     SUBDIR += rubygem-sprockets-helpers
-    SUBDIR += rubygem-sprockets-rails
+    SUBDIR += rubygem-sprockets-rails-rails4
     SUBDIR += rubygem-sprockets-rails-rails5
     SUBDIR += rubygem-sprockets-rails-rails50
     SUBDIR += rubygem-sprockets-rails-rails52
